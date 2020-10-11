@@ -21,4 +21,8 @@ module.exports = {
     'comma-dangle': 0,
     'react/jsx-filename-extension': 0
   },
+  ignorePatterns: [
+    'dist/*',
+    'node_modules/*'
+  ]
 };
