@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- 14
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token:
+    secure: aDYO7qQaQ9Cv7s2bfq8U1TrKtAZ9s6uC8tEWeyUMDJCSvcO0R4NXcBqOBbezvDReFsMLFwaCWqmU46uIKNX7jpKF+tIfcFIHePzd9DiiHfWEKb/saGU9epd8GiAWbTQCySmyJRJXb5E8zEstyYo9Dc6nOUOyy6Pl3xaRjfmePXCJz/l2rGYRZwzwlXu31Z5lbo5OdF5I8GPmm/X0rBWWhowLamrx3YBP/4jBS8QwlfhnYHB54ccELiF4ufyQNgMJDwvJF5dOllsXzCbrZ6FeLa7AGpSZM3j4NV1+1DfAr7+kjQSuy2PcRR9OwtLYnwHIZdKrX92SfqOXTnzQFiWD8Nn0oUZ9E56sRws9zngBQeuG/8Tjx7EXGOi7T6430AZdLKna6DImc5EQnsgeNcd6+ogqMcDTWWSDVRoW11KXy0eVGQUTyOh9X1fj84vj6E1Ayo60wnaxq/zE+h0Kyg4U2Lv4xTXrxTNoOkOoI3J2lZafnePuTj5B+qdNhjzKVrnSeh++GRfdmhqDYfbcW7OxmRb9nqNyEsmyGzkfwbZDLT3rZ+KS0l3/H4QSFxZynxyY9mrXJKSo5j90dnts10Q60n8QEyVPiH7XZo+VXgKLaruJlZfvWl9J0Tg2GW+0q/ZOtEOvNiOxTuAsg2u2GtNzG98Vym/Jx41D9spJ/h3/EH0=
+  keep_history: true
+  on:
+    branch: gh-pages
