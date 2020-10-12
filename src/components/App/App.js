@@ -1,12 +1,10 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
-import NavBar from './components/NavBar/NavBar';
-
 function App() {
   return (
     <div>
-      <NavBar />
+      <h1>Main</h1>
     </div>
   );
 }

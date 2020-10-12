@@ -1,15 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-
 body {
-  font: 1.4em 'Open Sans', Arial, Helvetica, sans-serif;
-  color: #383838;
+  background-color: #191919;
+  color: #fff;
+  margin: 0;
+  font: 1em 'Roboto Mono', monospace;
 }
 
-a {
+a, a:visited, a:active {
+  color: #fff;
   text-decoration: none;
-  color: #383838;
+  transition: color 0.4s;
 }
 
 a:hover {
-  font-weight: 600;
+  color: #f00;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
 }

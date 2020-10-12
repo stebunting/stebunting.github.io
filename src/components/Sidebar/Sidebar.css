@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.sidebar {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+}
+
+.keyword {
+  color: #55f;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 1em 0.3em;
+}
+
+.navInternal {
+  padding-left: 1em;
+}
+
+.title {
+  font: 2.4em 'Roboto';
+}
