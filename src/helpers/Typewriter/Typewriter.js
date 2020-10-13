@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 
 function Typewriter({ text }) {
   function getDelay() {
-    const min = 50;
+    const min = 80;
     const max = 500;
     return Math.floor((Math.random() * (max - min)) + min);
   }
@@ -12,13 +12,16 @@ function Typewriter({ text }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    let timerId;
     if (index < text.length) {
-      setTimeout(() => {
+      timerId = setTimeout(() => {
         setValue(text.slice(0, index + 1));
         setIndex(index + 1);
       }, getDelay());
     }
+    return () => clearInterval(timerId);
   }, [index]);
+
   return value;
 }
 Typewriter.propTypes = {

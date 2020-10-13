@@ -6,28 +6,35 @@ import Typewriter from '../../helpers/Typewriter/Typewriter';
 import './Contact.css';
 
 function ContactForm() {
+  const validColour = '#4f4';
+  const invalidColour = '#f66';
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [validName, setValidName] = useState(false);
+  const [validEmail, setValidEmail] = useState(false);
+  const [validMessage, setValidMessage] = useState(false);
 
-  function validate(type, value) {
+  function validate(event) {
+    const { value, name: type } = event.target;
     switch (type) {
       case 'name': {
         const re = /[^a-zA-ZÀ-ƶ '-]/;
-        const valid = !re.test(value);
+        setValidName(!re.test(value) && value.length > 0);
         setName(value);
         break;
       }
 
       case 'email': {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const valid = re.test(value);
+        setValidEmail(re.test(value));
         setEmail(value);
         break;
       }
 
       case 'message': {
-        const valid = value.length > 0;
+        setValidMessage(value.length > 0);
         setMessage(value);
         break;
       }
@@ -37,8 +44,15 @@ function ContactForm() {
     }
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (validName && validEmail && validMessage) {
+      // SEND EMAIL
+    }
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="formElement">
         <label htmlFor="name">
           <span className="labelText">
@@ -46,12 +60,13 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={(event) => validate('name', event.target.value)}
+            onChange={validate}
             type="text"
             id="name"
             name="name"
             placeholder="undefined"
             value={name}
+            style={{ color: validName ? validColour : invalidColour }}
           />
         </label>
       </div>
@@ -62,12 +77,13 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={(event) => validate('email', event.target.value)}
+            onChange={validate}
             type="email"
             id="email"
             name="email"
             placeholder="undefined"
             value={email}
+            style={{ color: validEmail ? validColour : invalidColour }}
           />
         </label>
       </div>
@@ -78,18 +94,19 @@ function ContactForm() {
             &nbsp;
           </span>
           <textarea
-            onChange={(event) => validate('message', event.target.value)}
+            onChange={validate}
             id="message"
             name="message"
             placeholder="undefined"
             value={message}
+            style={{ color: validMessage ? validColour : invalidColour }}
           />
         </label>
       </div>
       <div className="formElement">
         {''.padStart(16, '\u00a0')}
         &nbsp;
-        <input type="submit" id="submit" name="submit" value="dispatch()" />
+        <input type="submit" id="submit" name="submit" value={`dispatch(${validName && validEmail && validMessage})`} />
       </div>
     </form>
   );
