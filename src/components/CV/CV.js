@@ -3,8 +3,11 @@ import { hot } from 'react-hot-loader';
 
 function CV() {
   return (
-    <div>
-      <h1>CV</h1>
+    <div className="main">
+      <h2>
+        <span className="prompt">$</span>
+        &nbsp;CV
+      </h2>
     </div>
   );
 }

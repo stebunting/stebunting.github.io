@@ -10,7 +10,9 @@ import Technology from './components/Technology/Technology';
 import CV from './components/CV/CV';
 import Contact from './components/Contact/Contact';
 
-function Wrapper(component) {
+const data = require('./data.json');
+
+function Wrap(component) {
   return (
     <div className="container">
       <Sidebar />
@@ -19,12 +21,12 @@ function Wrapper(component) {
   );
 }
 
-const AppWrapper = () => Wrapper(<App />);
-const AboutWrapper = () => Wrapper(<About />);
-const ProjectsWrapper = () => Wrapper(<Projects />);
-const TechnologyWrapper = () => Wrapper(<Technology />);
-const CVWrapper = () => Wrapper(<CV />);
-const ContactWrapper = () => Wrapper(<Contact />);
+const AppWrapper = () => Wrap(<App />);
+const AboutWrapper = () => Wrap(<About />);
+const ProjectsWrapper = () => Wrap(<Projects />);
+const TechnologyWrapper = () => Wrap(<Technology />);
+const CVWrapper = () => Wrap(<CV />);
+const ContactWrapper = () => Wrap(<Contact />);
 
 ReactDOM.render(
   <BrowserRouter>

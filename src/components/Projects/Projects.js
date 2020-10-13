@@ -3,8 +3,15 @@ import { hot } from 'react-hot-loader';
 
 function Projects() {
   return (
-    <div>
-      <h1>Projects</h1>
+    <div className="main">
+      <h2>
+        <span className="prompt">$</span>
+        &nbsp;Projects
+      </h2>
+
+      <div className="project">
+        <div className="projectTitle">whisk.se</div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.formElement {
+  padding: 10px 0;
+  display: flex;
+}
+
+label {
+  display: flex;
+  width: 100%
+}
+
+.labelText {
+  padding-top: 10px;
+}

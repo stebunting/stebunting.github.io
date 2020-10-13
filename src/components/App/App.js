@@ -3,8 +3,11 @@ import { hot } from 'react-hot-loader';
 
 function App() {
   return (
-    <div>
-      <h1>Main</h1>
+    <div className="main">
+      <h2>
+        <span className="prompt">$</span>
+        &nbsp;Main
+      </h2>
     </div>
   );
 }

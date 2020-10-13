@@ -59,7 +59,8 @@ function NavBar() {
         <li>
           <ul className="navInternal">
             <MenuItem external link="https://www.linkedin.com/in/stevebunting/" name="linkedIn" />
-            <MenuItem external link="https://github.com/stebunting" name="gitHub" lastItem />
+            <MenuItem external link="https://github.com/stebunting" name="gitHub" />
+            <MenuItem external link="https://stackoverflow.com/users/7440624/steve-bunting" name="stackOverflow" lastItem />
           </ul>
         </li>
         <li>];</li>
@@ -71,7 +72,7 @@ function NavBar() {
 function Sidebar() {
   return (
     <div className="sidebar">
-      <h1 className="title">Steve Bunting</h1>
+      <h1><Link to="/">Steve Bunting</Link></h1>
       <NavBar />
     </div>
   );
