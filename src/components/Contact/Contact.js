@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { hot } from 'react-hot-loader';
 
+import Typewriter from '../../helpers/Typewriter/Typewriter';
 import './Contact.css';
 
 function ContactForm() {
@@ -99,7 +100,7 @@ function Contact() {
     <div className="main">
       <h2>
         <span className="prompt">$</span>
-        &nbsp;Contact
+        <Typewriter text="Contact" />
       </h2>
       <ContactForm />
     </div>

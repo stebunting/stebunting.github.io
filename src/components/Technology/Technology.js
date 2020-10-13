@@ -1,9 +1,12 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
+import { PropTypes } from 'prop-types';
+
+import Typewriter from '../../helpers/Typewriter/Typewriter';
 
 function TechnologyDetail({ name }) {
   function handler() {
-    console.log('handled');
+    // HANDLED
   }
 
   return (
@@ -12,13 +15,16 @@ function TechnologyDetail({ name }) {
     </div>
   );
 }
+TechnologyDetail.propTypes = {
+  name: PropTypes.string.isRequired
+};
 
 function Technology() {
   return (
     <div className="main">
       <h2>
         <span className="prompt">$</span>
-        &nbsp;Technology
+        <Typewriter text="Technology" />
       </h2>
 
       <TechnologyDetail name="code" />

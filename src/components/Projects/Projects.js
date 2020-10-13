@@ -1,12 +1,14 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
+import Typewriter from '../../helpers/Typewriter/Typewriter';
+
 function Projects() {
   return (
     <div className="main">
       <h2>
         <span className="prompt">$</span>
-        &nbsp;Projects
+        <Typewriter text="Projects" />
       </h2>
 
       <div className="project">

@@ -31,17 +31,11 @@ h2 {
   font: 2em 'Roboto';
   padding-top: 0.2em;
   text-transform: lowercase;
-  overflow: hidden;
-  animation: typing 3.5s steps(40, end);
-}
-
-@keyframes typing {
-  from { width: 0.8em }
-  to { width: 100% }
 }
 
 .prompt {
   color: #f66;
+  padding-right: 0.5em;
 }
 
 .container {
