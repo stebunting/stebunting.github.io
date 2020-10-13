@@ -1,3 +1,4 @@
+/* eslint-disable no-control-regex */
 import React, { useState } from 'react';
 import { hot } from 'react-hot-loader';
 
@@ -8,6 +9,33 @@ function ContactForm() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  function validate(type, value) {
+    switch (type) {
+      case 'name': {
+        const re = /[^a-zA-ZÀ-ƶ '-]/;
+        const valid = !re.test(value);
+        setName(value);
+        break;
+      }
+
+      case 'email': {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const valid = re.test(value);
+        setEmail(value);
+        break;
+      }
+
+      case 'message': {
+        const valid = value.length > 0;
+        setMessage(value);
+        break;
+      }
+
+      default:
+        break;
+    }
+  }
+
   return (
     <form>
       <div className="formElement">
@@ -17,7 +45,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={(event) => setName(event.target.value)}
+            onChange={(event) => validate('name', event.target.value)}
             type="text"
             id="name"
             name="name"
@@ -33,7 +61,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={(event) => validate('email', event.target.value)}
             type="email"
             id="email"
             name="email"
@@ -49,7 +77,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <textarea
-            onChange={(event) => setMessage(event.target.value)}
+            onChange={(event) => validate('message', event.target.value)}
             id="message"
             name="message"
             placeholder="undefined"
