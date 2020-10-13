@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 body {
   background-color: #191919;
   color: #fff;
@@ -17,7 +19,79 @@ a:hover {
   transition: color 0.4s;
 }
 
+h1 {
+  font: 2.4em 'Roboto';
+}
+
+h1 a:hover {
+  color: #fff;
+}
+
+h2 {
+  font: 2em 'Roboto';
+  padding-top: 0.2em;
+  text-transform: lowercase;
+}
+
+.prompt {
+  color: #f66;
+  padding-right: 0.5em;
+}
+
 .container {
   display: flex;
   flex-flow: row nowrap;
+}
+
+.main, .sidebar {
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.sidebar {
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  background-color: #232323;
+  padding: 1em;
+}
+
+input[type=text], input[type=email], textarea {
+  background-color: #232323;;
+  border: 1px #aaa solid;
+  color: #fff;
+  padding: 10px;
+  resize: none;
+  font: 1em 'Roboto Mono', monospace;
+  flex: 1;
+  outline: none;
+}
+
+textarea {
+  height: 8em;
+}
+
+input[type=submit] {
+  font: 1em 'Roboto Mono', monospace;
+  padding: 10px;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #aaa solid;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.projectOpen {
+  width: 100%;
+}
+
+.projectTitle {
+  font-size: 1.4em;
 }
