@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 import { PropTypes } from 'prop-types';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
@@ -32,4 +31,4 @@ function Technology() {
   );
 }
 
-export default hot(module)(Technology);
+export default Technology;

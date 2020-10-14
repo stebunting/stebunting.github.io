@@ -1,9 +1,11 @@
 const path = require('path');
-const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
+const DotenvWebpackPlugin = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const dotenv = require('dotenv').config();
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['./src/index.js'],
   mode: 'development',
   module: {
     rules: [
@@ -29,11 +31,15 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
-    publicPath: 'http://localhost:3000/',
-    hotOnly: true
+    publicPath: 'http://localhost:3000/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new DotenvWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/templates/index.ejs',
+      inject: 'body',
+      RECAPTCHA_API_KEY: process.env.RECAPTCHA_API_KEY
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'public', to: '.' }

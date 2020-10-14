@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -78,4 +77,4 @@ function Sidebar() {
   );
 }
 
-export default hot(module)(Sidebar);
+export default Sidebar;

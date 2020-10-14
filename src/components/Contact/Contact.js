@@ -1,11 +1,15 @@
-/* eslint-disable no-control-regex */
+/* global grecaptcha */
 import React, { useState, useReducer } from 'react';
-import { hot } from 'react-hot-loader';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
+import validate from '../../helpers/functions/validate';
 import './Contact.css';
 
+const axios = require('axios');
+
 function ContactForm() {
+  const gRecaptchaToken = '6LfbV9cZAAAAAHiRUS6XMNMiIoWsXTTL9gzfPzxP';
+
   // Valid/Invalid Colour Definitions
   const validColour = '#4f4';
   const invalidColour = '#f66';
@@ -15,42 +19,46 @@ function ContactForm() {
   const [validEmail, setValidEmail] = useState(false);
   const [validMessage, setValidMessage] = useState(false);
 
-  // Reducer function
-  function reducer(state, action) {
-    const { value, name: type } = action;
-    switch (type) {
-      case 'name': {
-        const re = /[^a-zA-ZÀ-ƶ '-]/;
-        setValidName(!re.test(value) && value.length > 0);
-        return value;
-      }
-
-      case 'email': {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        setValidEmail(re.test(value));
-        return value;
-      }
-
-      case 'message': {
-        setValidMessage(value.length > 0);
-        return value;
-      }
-
-      default:
-        return value;
-    }
-  }
-
   // Form Input State Declaration
-  const [name, setName] = useReducer(reducer, '');
-  const [email, setEmail] = useReducer(reducer, '');
-  const [message, setMessage] = useReducer(reducer, '');
+  const [name, setName] = useReducer((_, action) => {
+    setValidName(validate('name', action));
+    return action;
+  }, '');
+
+  const [email, setEmail] = useReducer((_, action) => {
+    setValidEmail(validate('email', action));
+    return action;
+  }, '');
+
+  const [message, setMessage] = useReducer((_, action) => {
+    setValidMessage(validate('message', action));
+    return action;
+  }, '');
 
   // Submit Form
   function handleSubmit(event) {
     event.preventDefault();
     if (validName && validEmail && validMessage) {
-      // SEND EMAIL
+      const payload = { name, email, message };
+
+      grecaptcha.ready(() => {
+        grecaptcha.execute(gRecaptchaToken, { action: 'send_message' })
+          .then((token) => {
+            payload.greptchaToken = token;
+            axios({
+              url: 'https://rfxp-api.herokuapp.com/contact/',
+              method: 'post',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              data: payload
+            }).then((response) => {
+              console.log(response.data);
+            }).catch((error) => {
+              console.log(error);
+            });
+          });
+      });
     }
   }
 
@@ -63,7 +71,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={(event) => setName(event.target)}
+            onChange={(event) => setName(event.target.value)}
             type="text"
             id="name"
             name="name"
@@ -80,7 +88,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={(event) => setEmail(event.target)}
+            onChange={(event) => setEmail(event.target.value)}
             type="email"
             id="email"
             name="email"
@@ -97,7 +105,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <textarea
-            onChange={(event) => setMessage(event.target)}
+            onChange={(event) => setMessage(event.target.value)}
             id="message"
             name="message"
             placeholder="undefined"
@@ -127,4 +135,4 @@ function Contact() {
   );
 }
 
-export default hot(module)(Contact);
+export default Contact;

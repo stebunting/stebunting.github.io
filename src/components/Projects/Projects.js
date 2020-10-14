@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
@@ -18,4 +17,4 @@ function Projects() {
   );
 }
 
-export default hot(module)(Projects);
+export default Projects;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
@@ -8,10 +7,10 @@ function App() {
     <div className="main">
       <h2>
         <span className="prompt">$</span>
-        <Typewriter text="Main" />
+        <Typewriter text="Msfain" />
       </h2>
     </div>
   );
 }
 
-export default hot(module)(App);
+export default App;

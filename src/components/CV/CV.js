@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
@@ -14,4 +13,4 @@ function CV() {
   );
 }
 
-export default hot(module)(CV);
+export default CV;
