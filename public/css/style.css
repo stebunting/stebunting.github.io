@@ -58,24 +58,25 @@ h2 {
   padding: 1em;
 }
 
+input[type=submit] {
+  font: 1em 'Roboto Mono', monospace;
+  padding: 10px;
+}
+
 input[type=text], input[type=email], textarea {
   background-color: #232323;;
-  border: 1px #aaa solid;
+  border: 1px #757575 solid;
   color: #fff;
   padding: 10px;
   resize: none;
   font: 1em 'Roboto Mono', monospace;
   flex: 1;
   outline: none;
+  caret-color: #757575
 }
 
 textarea {
   height: 8em;
-}
-
-input[type=submit] {
-  font: 1em 'Roboto Mono', monospace;
-  padding: 10px;
 }
 
 .project {

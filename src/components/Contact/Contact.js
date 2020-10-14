@@ -1,49 +1,52 @@
 /* eslint-disable no-control-regex */
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import { hot } from 'react-hot-loader';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 import './Contact.css';
 
 function ContactForm() {
+  // Valid/Invalid Colour Definitions
   const validColour = '#4f4';
   const invalidColour = '#f66';
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  // Validity State
   const [validName, setValidName] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
   const [validMessage, setValidMessage] = useState(false);
 
-  function validate(event) {
-    const { value, name: type } = event.target;
+  // Reducer function
+  function reducer(state, action) {
+    const { value, name: type } = action;
     switch (type) {
       case 'name': {
         const re = /[^a-zA-ZÀ-ƶ '-]/;
         setValidName(!re.test(value) && value.length > 0);
-        setName(value);
-        break;
+        return value;
       }
 
       case 'email': {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         setValidEmail(re.test(value));
-        setEmail(value);
-        break;
+        return value;
       }
 
       case 'message': {
         setValidMessage(value.length > 0);
-        setMessage(value);
-        break;
+        return value;
       }
 
       default:
-        break;
+        return value;
     }
   }
 
+  // Form Input State Declaration
+  const [name, setName] = useReducer(reducer, '');
+  const [email, setEmail] = useReducer(reducer, '');
+  const [message, setMessage] = useReducer(reducer, '');
+
+  // Submit Form
   function handleSubmit(event) {
     event.preventDefault();
     if (validName && validEmail && validMessage) {
@@ -60,7 +63,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={validate}
+            onChange={(event) => setName(event.target)}
             type="text"
             id="name"
             name="name"
@@ -77,7 +80,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <input
-            onChange={validate}
+            onChange={(event) => setEmail(event.target)}
             type="email"
             id="email"
             name="email"
@@ -94,7 +97,7 @@ function ContactForm() {
             &nbsp;
           </span>
           <textarea
-            onChange={validate}
+            onChange={(event) => setMessage(event.target)}
             id="message"
             name="message"
             placeholder="undefined"
