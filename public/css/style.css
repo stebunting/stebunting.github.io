@@ -60,69 +60,6 @@ h2 {
   padding: 1em;
 }
 
-input[type=submit] {
-  font: 1em 'Roboto Mono', monospace;
-  padding: 10px;
-}
-
-input[type=text], input[type=email], textarea {
-  background-color: #232323;;
-  border: 1px #757575 solid;
-  color: #fff;
-  padding: 10px;
-  resize: none;
-  font: 1em 'Roboto Mono', monospace;
-  flex: 1;
-  outline: none;
-  caret-color: #757575
-}
-
-textarea {
-  height: 8em;
-}
-
 .grecaptcha-badge {
   visibility: hidden;
-}
-
-.detailContainer {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px #aaa solid;
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
-  margin: 10px;
-  transition: width 1s;
-}
-
-.project-open {
-  order: 0;
-  width: 100%;
-}
-
-.projectTitle {
-  font-size: 1.4em;
-}
-
-.contactForm {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-}
-
-.contactForm form {
-  flex: 1;
-}
-
-footer {
-  text-align: center;
-  color: #757575;
-  font-size: 0.8em;
 }

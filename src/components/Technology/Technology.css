@@ -1,0 +1,25 @@
+.detailContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.projectTitle {
+  font-size: 1.4em;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #aaa solid;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  margin: 10px;
+  transition: width 1s;
+}
+
+.project-open {
+  order: 0;
+  width: 100%;
+}

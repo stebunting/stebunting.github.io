@@ -2,19 +2,16 @@ import React, { useState } from 'react';
 import { PropTypes } from 'prop-types';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
+import './Technology.css';
 
 function TechnologyDetail({ name }) {
   const [open, setOpen] = useState(false);
-
-  function clickHandler() {
-    setOpen(!open);
-  }
 
   const classes = open ? 'project project-open' : 'project';
   return (
     <div
       className={classes}
-      onClick={clickHandler}
+      onClick={() => setOpen(!open)}
     >
       <div className="projectTitle">{name}</div>
     </div>
@@ -25,6 +22,12 @@ TechnologyDetail.propTypes = {
 };
 
 function Technology() {
+  const order = [
+    <TechnologyDetail name="code" />,
+    <TechnologyDetail name="frameworks" />,
+    <TechnologyDetail name="deployment" />
+  ];
+
   const retValue = (
     <div className="main">
       <h2>
@@ -32,9 +35,7 @@ function Technology() {
         <Typewriter text="Technology" />
       </h2>
       <div className="detailContainer">
-
-        <TechnologyDetail name="code" />
-        <TechnologyDetail name="frameworks" />
+        {order}
       </div>
     </div>
   );
