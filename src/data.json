@@ -1,0 +1,38 @@
+{
+  "projects": [{
+    "name": "whisk.se",
+    "thumbImg": "",
+    "description": "website",
+    "homepage": "https://whisk.se/",
+    "github": [
+      "https://github.com/stebunting/whiskse",
+      "https://github.com/stebunting/whisk-management"
+    ],
+    "technologies": [
+      "node.js",
+      "javascript",
+      "git",
+      "github",
+      "heroku"
+    ]
+  }],
+  "technologies": {
+    "code": [
+      "javascript",
+      "python",
+      "java",
+      "swift"
+    ],
+    "frameworks": [
+      "node.js",
+      "react",
+      "flask"
+    ],
+    "deployment": [
+      "git",
+      "github",
+      "travis-ci",
+      "heroku"
+    ]
+  }
+}
