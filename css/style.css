@@ -53,6 +53,8 @@ h2 {
 }
 
 .main {
+  display: flex;
+  flex-flow: column nowrap;
   flex: 1;
   background-color: #232323;
   padding: 1em;
@@ -79,6 +81,15 @@ textarea {
   height: 8em;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.detailContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .project {
   display: flex;
   justify-content: center;
@@ -87,12 +98,31 @@ textarea {
   width: 250px;
   height: 250px;
   cursor: pointer;
+  margin: 10px;
+  transition: width 1s;
 }
 
-.projectOpen {
+.project-open {
+  order: 0;
   width: 100%;
 }
 
 .projectTitle {
   font-size: 1.4em;
+}
+
+.contactForm {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
+.contactForm form {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  color: #757575;
+  font-size: 0.8em;
 }
