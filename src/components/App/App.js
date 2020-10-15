@@ -7,7 +7,7 @@ function App() {
     <div className="main">
       <h2>
         <span className="prompt">$</span>
-        <Typewriter text="Msfain" />
+        <Typewriter text="Main" />
       </h2>
     </div>
   );
