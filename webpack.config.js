@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpackPlugin = require('dotenv-webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 require('dotenv').config();
 
 module.exports = {
@@ -48,6 +49,11 @@ module.exports = {
       template: 'src/templates/index.ejs',
       RECAPTCHA_API_KEY: process.env.RECAPTCHA_API_KEY
     }),
-    new DotenvWebpackPlugin()
+    new DotenvWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public', to: '.' }
+      ]
+    })
   ]
 };
