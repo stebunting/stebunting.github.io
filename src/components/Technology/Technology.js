@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PropTypes } from 'prop-types';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
 function TechnologyDetail({ name }) {
-  function handler() {
-    // HANDLED
+  const [open, setOpen] = useState(false);
+
+  function clickHandler() {
+    setOpen(!open);
   }
 
+  const classes = open ? 'project project-open' : 'project';
   return (
-    <div className="project" onClick={handler} onKeyDown={handler} role="link" tabIndex={0}>
+    <div
+      className={classes}
+      onClick={clickHandler}
+    >
       <div className="projectTitle">{name}</div>
     </div>
   );
@@ -19,16 +25,20 @@ TechnologyDetail.propTypes = {
 };
 
 function Technology() {
-  return (
+  const retValue = (
     <div className="main">
       <h2>
         <span className="prompt">$</span>
         <Typewriter text="Technology" />
       </h2>
+      <div className="detailContainer">
 
-      <TechnologyDetail name="code" />
+        <TechnologyDetail name="code" />
+        <TechnologyDetail name="frameworks" />
+      </div>
     </div>
   );
+  return retValue;
 }
 
 export default Technology;

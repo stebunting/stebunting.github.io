@@ -63,63 +63,72 @@ function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="formElement">
-        <label htmlFor="name">
-          <span className="labelText">
-            {'const name ='.padStart(16, '\u00a0')}
-            &nbsp;
-          </span>
-          <input
-            onChange={(event) => setName(event.target.value)}
-            type="text"
-            id="name"
-            name="name"
-            placeholder="undefined"
-            value={name}
-            style={{ color: validName ? validColour : invalidColour }}
-          />
-        </label>
-      </div>
-      <div className="formElement">
-        <label htmlFor="email">
-          <span className="labelText">
-            {'const email ='.padStart(16, '\u00a0')}
-            &nbsp;
-          </span>
-          <input
-            onChange={(event) => setEmail(event.target.value)}
-            type="email"
-            id="email"
-            name="email"
-            placeholder="undefined"
-            value={email}
-            style={{ color: validEmail ? validColour : invalidColour }}
-          />
-        </label>
-      </div>
-      <div className="formElement">
-        <label htmlFor="message">
-          <span className="labelText">
-            {'const message ='.padStart(16, '\u00a0')}
-            &nbsp;
-          </span>
-          <textarea
-            onChange={(event) => setMessage(event.target.value)}
-            id="message"
-            name="message"
-            placeholder="undefined"
-            value={message}
-            style={{ color: validMessage ? validColour : invalidColour }}
-          />
-        </label>
-      </div>
-      <div className="formElement">
-        {''.padStart(16, '\u00a0')}
-        &nbsp;
-        <input type="submit" id="submit" name="submit" value={`dispatch(${validName && validEmail && validMessage})`} />
-      </div>
-    </form>
+    <div className="contactForm">
+      <form onSubmit={handleSubmit}>
+        <div className="formElement">
+          <label htmlFor="name">
+            <span className="labelText">
+              {'const name ='.padStart(16, '\u00a0')}
+              &nbsp;
+            </span>
+            <input
+              onChange={(event) => setName(event.target.value)}
+              type="text"
+              id="name"
+              name="name"
+              placeholder="undefined"
+              value={name}
+              style={{ color: validName ? validColour : invalidColour }}
+            />
+          </label>
+        </div>
+        <div className="formElement">
+          <label htmlFor="email">
+            <span className="labelText">
+              {'const email ='.padStart(16, '\u00a0')}
+              &nbsp;
+            </span>
+            <input
+              onChange={(event) => setEmail(event.target.value)}
+              type="email"
+              id="email"
+              name="email"
+              placeholder="undefined"
+              value={email}
+              style={{ color: validEmail ? validColour : invalidColour }}
+            />
+          </label>
+        </div>
+        <div className="formElement">
+          <label htmlFor="message">
+            <span className="labelText">
+              {'const message ='.padStart(16, '\u00a0')}
+              &nbsp;
+            </span>
+            <textarea
+              onChange={(event) => setMessage(event.target.value)}
+              id="message"
+              name="message"
+              placeholder="undefined"
+              value={message}
+              style={{ color: validMessage ? validColour : invalidColour }}
+            />
+          </label>
+        </div>
+        <div className="formElement">
+          {''.padStart(16, '\u00a0')}
+          &nbsp;
+          <input type="submit" id="submit" name="submit" value={`dispatch(${validName && validEmail && validMessage})`} />
+        </div>
+      </form>
+      <footer>
+        This site is protected by reCAPTCHA and the Google&nbsp;
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>
+        &nbsp;and&nbsp;
+        <a href="https://policies.google.com/terms" target="_blank" rel="noreferrer">Terms of Service</a>
+        &nbsp;apply.
+      </footer>
+    </div>
   );
 }
 
