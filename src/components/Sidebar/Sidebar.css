@@ -18,6 +18,30 @@ li {
   margin: 1em 0.3em;
 }
 
-.navInternal {
+.arrow {
+  fill: #a0a0a0;
+}
+
+svg {
+  margin-right: 0.4em;
+  transition: transform 0.15s linear;
+}
+
+svg.menuFolded {
+  transform: rotate(-90deg);
+  transition: transform 0.15s linear;
+}
+
+.navList {
+  overflow: hidden;
   padding-left: 1em;
+  display: block;
+  max-height: 300px;
+  transition: max-height 0.5s ease-out;
+}
+
+.navListFolded {
+  max-height: 0;
+  display: none;
+  transition: max-height 0.5s ease-out;
 }
