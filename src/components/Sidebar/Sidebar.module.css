@@ -45,3 +45,7 @@ svg.menuFolded {
   display: none;
   transition: max-height 0.5s ease-out;
 }
+
+.currentPage {
+  color: #f00;
+}

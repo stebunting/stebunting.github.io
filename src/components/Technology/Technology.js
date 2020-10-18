@@ -1,24 +1,7 @@
-import React, { useState } from 'react';
-import { PropTypes } from 'prop-types';
+import React from 'react';
+import TechnologyDetail from './TechnologyDetail';
 
 import Typewriter from '../../helpers/Typewriter/Typewriter';
-
-function TechnologyDetail({ name }) {
-  const [open, setOpen] = useState(false);
-
-  const classes = open ? 'project project-open' : 'project';
-  return (
-    <div
-      className={classes}
-      onClick={() => setOpen(!open)}
-    >
-      <div className="projectTitle">{name}</div>
-    </div>
-  );
-}
-TechnologyDetail.propTypes = {
-  name: PropTypes.string.isRequired
-};
 
 function Technology() {
   const order = [

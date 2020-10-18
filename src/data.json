@@ -2,37 +2,130 @@
   "projects": [{
     "name": "whisk.se",
     "thumbImg": "",
-    "description": "website",
+    "description": "A website and web store for an eco-conscious bakery in Stockholm",
     "homepage": "https://whisk.se/",
     "github": [
       "https://github.com/stebunting/whiskse",
       "https://github.com/stebunting/whisk-management"
     ],
+    "date": "May - June 2020",
     "technologies": [
-      "node.js",
-      "javascript",
-      "git",
-      "github",
-      "heroku"
+      "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "REST APIs",
+      "Swish",
+      "HTML5",
+      "CSS",
+      "WordPress",
+      "WooCommerce",
+      "Git",
+      "GitHub",
+      "Heroku"
+    ]
+  }, {
+    "name": "Naomi Lien Presave",
+    "thumbImg": "",
+    "description": "Presave campaign for Naomi Lien's new track release, enabling fans to autosave to Spotify, Apple Music and Deezer on release date.",
+    "homepage": "http://opensourcemuzic.com/dnn/",
+    "github": "",
+		"date": "April 2020",
+    "technologies": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Heroku",
+      "REST APIs"
+    ]
+  }, {
+    "name": "RFXp",
+    "thumbImg": "",
+    "description": "An Android / iOS application for calculating and verifying inter-modulations and avoiding clashes with local broadcasting when setting up touring radio microphone systems.",
+    "homepage": "http://rfxp.stevebunting.com/",
+    "github": "",
+    "date": "February - April 2020",
+    "technologies": [
+      "Java",
+      "Swift 5",
+      "ML Kit"
+    ]
+  }, {
+    "name": "RF Library",
+    "thumbImg": "",
+    "description": "An OS X application to convert, process and file exported files from radio scanners for use in radio microphone and in-ear monitoring configuration.",
+    "homepage": "https://rflibrary.stevebunting.com/",
+    "github": "https://github.com/stebunting/rf-library",
+    "date": "March 2017 - August 2019",
+    "technologies": [
+      "Python",
+      "TkInter"
+    ]
+  }, {
+    "name": "HFx",
+    "thumbImg": "",
+    "description": "A web app for retrieving historical exchange rates and displaying them in a usable way for efficient book-keeping.",
+    "homepage": "http://hfx.stevebunting.com",
+    "github": "https://github.com/stebunting/hfx",
+    "date": "June 2017",
+    "technologies": [
+      "Python",
+      "Flask",
+      "MySQL",
+      "JavaScript",
+      "HTML5",
+      "CSS",
+      "Bootstrap",
+      "jQuery",
+      "Heroku"
+    ]
+  }, {
+    "name": "Share Trader",
+    "thumbImg": "",
+    "description": "A web application for keeping track of LSE-based share portfolios. Gets up-to-date data from ADVFN and logs it to a database to track portfolios and compare to indices. Final project for CS50.",
+    "homepage": "http://sharetrader.stevebunting.com",
+    "youtube": "https://www.youtube.com/watch?v=F2OheR7O0CE",
+    "github": "https://github.com/stebunting/share-trader",
+    "date": "April 2017",
+    "technologies": [
+      "Python",
+      "Flask",
+      "MySQL",
+      "JavaScript",
+      "HTML5",
+      "CSS",
+      "Bootstrap",
+      "Heroku"
     ]
   }],
   "technologies": {
     "code": [
-      "javascript",
-      "python",
-      "java",
-      "swift"
+      "JavaScript",
+      "Python",
+      "Java",
+      "Swift 5",
+      "HTML5",
+      "CSS"
+    ],
+    "data": [
+      "MongoDB",
+      "MySQL"
     ],
     "frameworks": [
-      "node.js",
-      "react",
-      "flask"
+      "Node.js",
+      "Express",
+      "React",
+      "Flask",
+      "jQuery",
+      "Bootstrap",
+      "TkInter",
+      "ML Kit"
     ],
     "deployment": [
-      "git",
-      "github",
-      "travis-ci",
-      "heroku"
+      "Git",
+      "GitHub",
+      "Travis-CI",
+      "Heroku"
     ]
   }
 }
