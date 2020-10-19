@@ -39,7 +39,8 @@ module.exports = {
   resolve: { extensions: ['.js'] },
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
-    port: 3000
+    port: 3000,
+    stats: 'minimal'
   },
   output: {
     filename: 'bundle.js'
