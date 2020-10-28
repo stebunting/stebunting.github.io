@@ -2,8 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Contact.module.css';
 import Input from './Input';
+import Status from './Status';
 
-function ContactForm({ details, handleSubmit, handleChange }) {
+function ContactForm({
+  details,
+  status,
+  sending,
+  handleSubmit,
+  handleChange
+}) {
   return (
     <div className={css.contactForm}>
       <form onSubmit={handleSubmit}>
@@ -28,6 +35,7 @@ function ContactForm({ details, handleSubmit, handleChange }) {
           valid={details.messageValid}
           onChange={handleChange}
         />
+        <Status status={status} />
         <div className={css.formElement}>
           {''.padStart(16, '\u00a0')}
           &nbsp;
@@ -35,7 +43,10 @@ function ContactForm({ details, handleSubmit, handleChange }) {
             type="submit"
             id="submit"
             name="submit"
-            value={`dispatch(${details.nameValid && details.emailValid && details.messageValid})`}
+            disabled={sending}
+            value={sending
+              ? 'dispatching...'
+              : `dispatch(${details.nameValid && details.emailValid && details.messageValid})`}
           />
         </div>
       </form>
@@ -56,8 +67,10 @@ ContactForm.propTypes = {
     message: PropTypes.string.isRequired,
     nameValid: PropTypes.bool.isRequired,
     emailValid: PropTypes.bool.isRequired,
-    messageValid: PropTypes.bool.isRequired
+    messageValid: PropTypes.bool.isRequired,
   }).isRequired,
+  status: PropTypes.string.isRequired,
+  sending: PropTypes.bool.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired
 };

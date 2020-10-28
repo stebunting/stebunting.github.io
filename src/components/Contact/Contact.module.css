@@ -32,6 +32,12 @@ input[type="submit"] {
   padding: 10px;
 }
 
+input[type="submit"]:disabled,
+input[type="submit"]:active {
+  background-color: #eaeaea;
+  color: #707070;
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -44,6 +50,10 @@ textarea {
   flex: 1;
   outline: none;
   caret-color: #757575;
+}
+
+#status:focus {
+  color: grey;
 }
 
 textarea {

@@ -1,7 +1,8 @@
 /* global grecaptcha */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import validate from '../../helpers/functions/validate';
 import ContactForm from './ContactForm';
+import statusMessages from './statusMessages';
 
 function ContactFormController() {
   const gRecaptchaToken = process.env.RECAPTCHA_API_KEY;
@@ -14,11 +15,15 @@ function ContactFormController() {
     emailValid: false,
     messageValid: false
   });
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState(statusMessages.UNDEFINED);
 
   // Submit Form
   function handleSubmit(event) {
     event.preventDefault();
     if (formDetails.nameValid && formDetails.emailValid && formDetails.messageValid) {
+      setSending(true);
+      setStatus(statusMessages.SENDING);
       const payload = {
         name: formDetails.name,
         email: formDetails.email,
@@ -30,20 +35,45 @@ function ContactFormController() {
           .then((token) => {
             payload.greptchaToken = token;
 
-            fetch('https://rfxp-api.herokuapp.com/contact/', {
-              method: 'POST',
-              mode: 'cors',
+            fetch('htps://rfxp-api.herokuapp.com/contact/', {
+              method: 'post',
               headers: {
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify(payload)
             }).then((response) => response.json())
-              .then((data) => console.log(data))
-              .catch((error) => console.log(error));
+              .then((data) => {
+                setSending(false);
+                if (data.status === 'OK') {
+                  setStatus(statusMessages.EMAIL_SENT);
+                } else {
+                  setStatus(statusMessages.ERROR);
+                }
+              })
+              .catch(() => {
+                setSending(false);
+                setStatus(statusMessages.ERROR);
+              });
           });
       });
+    } else {
+      setStatus(setStatus.INVALID_INPUT);
     }
   }
+
+  function getStatus() {
+    // if (formDetails.name === '' && formDetails.email === '' && formDetails.message === '') {
+    //   return '';
+    // }
+    if (formDetails.nameValid && formDetails.emailValid && formDetails.messageValid) {
+      return statusMessages.VALID_INPUT;
+    }
+    return statusMessages.UNDEFINED;
+  }
+
+  useEffect(() => {
+    setStatus(getStatus());
+  }, [formDetails]);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -59,6 +89,8 @@ function ContactFormController() {
       handleSubmit={handleSubmit}
       handleChange={handleChange}
       details={formDetails}
+      status={status}
+      sending={sending}
     />
   );
 }
