@@ -35,7 +35,7 @@ function ContactFormController() {
           .then((token) => {
             payload.greptchaToken = token;
 
-            fetch('htps://rfxp-api.herokuapp.com/contact/', {
+            fetch('https://rfxp-api.herokuapp.com/contact/', {
               method: 'post',
               headers: {
                 'Content-Type': 'application/json'
