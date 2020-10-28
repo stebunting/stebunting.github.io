@@ -98,20 +98,25 @@
       "Heroku"
     ]
   }],
-  "technologies": {
-    "code": [
+  "technologies": [{
+    "type": "code",
+    "members": [
       "JavaScript",
       "Python",
       "Java",
       "Swift 5",
       "HTML5",
       "CSS"
-    ],
-    "data": [
+    ]
+  }, {
+    "type": "data",
+    "members": [
       "MongoDB",
       "MySQL"
-    ],
-    "frameworks": [
+    ]
+  }, {
+    "type": "frameworks",
+    "members": [
       "Node.js",
       "Express",
       "React",
@@ -120,12 +125,14 @@
       "Bootstrap",
       "TkInter",
       "ML Kit"
-    ],
-    "deployment": [
+    ]
+  }, {
+    "type": "deployment",
+    "members": [
       "Git",
       "GitHub",
       "Travis-CI",
       "Heroku"
     ]
-  }
+  }]
 }

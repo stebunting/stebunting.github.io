@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import css from './Sidebar.module.css';
 
 // Component to render an arrow

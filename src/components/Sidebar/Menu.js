@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
 import css from './Sidebar.module.css';
-
 import Arrow from './Arrow';
 
 // Function to render a sidebar menu wrapper

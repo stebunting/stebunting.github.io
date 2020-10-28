@@ -25,8 +25,8 @@ function Wrap(component) {
 
 const MainWrapper = () => Wrap(<Main />);
 const AboutWrapper = () => Wrap(<About />);
-const ProjectsWrapper = () => Wrap(<Projects />);
-const TechnologyWrapper = () => Wrap(<Technology />);
+const ProjectsWrapper = () => Wrap(<Projects data={data.projects} />);
+const TechnologyWrapper = () => Wrap(<Technology data={data.technologies} />);
 const CVWrapper = () => Wrap(<CV />);
 const ContactWrapper = () => Wrap(<Contact />);
 

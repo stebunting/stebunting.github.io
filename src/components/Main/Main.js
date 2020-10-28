@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
 function App() {
