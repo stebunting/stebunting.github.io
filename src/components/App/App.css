@@ -89,10 +89,32 @@ h2 {
   height: 250px;
   cursor: pointer;
   margin: 10px;
+  overflow: hidden;
   transition: width 1s;
 }
 
 .project-open {
-  order: 0;
   width: 100%;
+  transition: width 1s;
+}
+
+.project:focus {
+  outline: none;
+}
+
+.projectContent {
+  display: flex;
+}
+
+.projectItem {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  height: 100%;
+}
+
+.projectItem img {
+  padding-bottom: 8px;
 }

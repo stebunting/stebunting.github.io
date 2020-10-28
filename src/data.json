@@ -101,38 +101,39 @@
   "technologies": [{
     "type": "code",
     "members": [
-      "JavaScript",
-      "Python",
-      "Java",
-      "Swift 5",
-      "HTML5",
-      "CSS"
+      { "name": "JavaScript", "imgUrl": "js.png" },
+      { "name": "Python", "imgUrl": "python.png" },
+      { "name": "Java", "imgUrl": "java.png" },
+      { "name": "Swift 5", "imgUrl": "swift.svg" },
+      { "name": "PHP", "imgUrl": "php.png" },
+      { "name": "HTML5", "imgUrl": "html5.png" },
+      { "name": "CSS", "imgUrl": "css.png" }
     ]
   }, {
     "type": "data",
     "members": [
-      "MongoDB",
-      "MySQL"
+      { "name": "MongoDB", "imgUrl": "mongodb.png" },
+      { "name": "MySQL", "imgUrl": "mysql.png" }
     ]
   }, {
     "type": "frameworks",
     "members": [
-      "Node.js",
-      "Express",
-      "React",
-      "Flask",
-      "jQuery",
-      "Bootstrap",
-      "TkInter",
-      "ML Kit"
+      { "name": "Node.js", "imgUrl": null },
+      { "name": "Express", "imgUrl": null },
+      { "name": "React", "imgUrl": null },
+      { "name": "Flask", "imgUrl": null },
+      { "name": "jQuery", "imgUrl": null },
+      { "name": "Bootstrap", "imgUrl": null },
+      { "name": "TkInter", "imgUrl": null },
+      { "name": "ML Kit", "imgUrl": null }
     ]
   }, {
     "type": "deployment",
     "members": [
-      "Git",
-      "GitHub",
-      "Travis-CI",
-      "Heroku"
+      { "name": "Git", "imgUrl": null },
+      { "name": "GitHub", "imgUrl": null },
+      { "name": "Travis-CI", "imgUrl": null },
+      { "name": "Heroku", "imgUrl": null }
     ]
   }]
 }
