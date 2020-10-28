@@ -1,25 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import TechnologyDetail from './TechnologyDetail';
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
 function Technology({ data }) {
-  const elements = data.map((tech) => (
-    <TechnologyDetail name={tech.type} key={tech.type} />
-  ));
+  const [openElement, setOpenElement] = useState(null);
 
-  const retValue = (
+  function handleClick(event) {
+    const { id } = event.target;
+    setOpenElement(openElement === id ? null : id);
+  }
+
+  const compareFunction = (a, b) => {
+    if (a.type === openElement) return -1;
+    if (b.type === openElement) return 1;
+    return 0;
+  };
+
+  return (
     <div className="main">
       <h2>
         <span className="prompt">$</span>
         <Typewriter text="Technology" />
       </h2>
       <div className="detailContainer">
-        {elements}
+        {data.sort(compareFunction).map((tech) => (
+          <TechnologyDetail
+            key={tech.type}
+            data={tech}
+            open={openElement === tech.type}
+            handleClick={handleClick}
+          />
+        ))}
       </div>
     </div>
   );
-  return retValue;
 }
 Technology.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({

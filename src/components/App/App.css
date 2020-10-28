@@ -81,6 +81,7 @@ h2 {
 
 .project {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   border: 1px #aaa solid;

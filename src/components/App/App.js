@@ -11,7 +11,6 @@ import Technology from '../Technology/Technology';
 import CV from '../CV/CV';
 import Contact from '../Contact/Contact';
 
-// TODO
 const data = require('../../data.json');
 
 function Wrap(component) {
