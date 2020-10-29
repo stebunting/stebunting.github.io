@@ -104,7 +104,7 @@
       { "name": "JavaScript", "imgUrl": "js.png" },
       { "name": "Python", "imgUrl": "python.png" },
       { "name": "Java", "imgUrl": "java.png" },
-      { "name": "Swift 5", "imgUrl": "swift.svg" },
+      { "name": "Swift", "imgUrl": "swift.svg" },
       { "name": "PHP", "imgUrl": "php.png" },
       { "name": "HTML5", "imgUrl": "html5.png" },
       { "name": "CSS", "imgUrl": "css.png" }
@@ -118,22 +118,22 @@
   }, {
     "type": "frameworks",
     "members": [
-      { "name": "Node.js", "imgUrl": null },
-      { "name": "Express", "imgUrl": null },
-      { "name": "React", "imgUrl": null },
-      { "name": "Flask", "imgUrl": null },
-      { "name": "jQuery", "imgUrl": null },
-      { "name": "Bootstrap", "imgUrl": null },
-      { "name": "TkInter", "imgUrl": null },
-      { "name": "ML Kit", "imgUrl": null }
+      { "name": "Node.js", "imgUrl": "nodejs.png" },
+      { "name": "Express", "imgUrl": "express.png" },
+      { "name": "React", "imgUrl": "react.png" },
+      { "name": "Flask", "imgUrl": "flask.png" },
+      { "name": "jQuery", "imgUrl": "jquery.png" },
+      { "name": "Bootstrap", "imgUrl": "bootstrap.svg" },
+      { "name": "TkInter", "imgUrl": "python.png" },
+      { "name": "Firebase", "imgUrl": "firebase.png" }
     ]
   }, {
     "type": "deployment",
     "members": [
-      { "name": "Git", "imgUrl": null },
-      { "name": "GitHub", "imgUrl": null },
-      { "name": "Travis-CI", "imgUrl": null },
-      { "name": "Heroku", "imgUrl": null }
+      { "name": "Git", "imgUrl": "git.png" },
+      { "name": "GitHub", "imgUrl": "github.png" },
+      { "name": "Travis-CI", "imgUrl": "travis.png" },
+      { "name": "Heroku", "imgUrl": "heroku.svg" }
     ]
   }]
 }
