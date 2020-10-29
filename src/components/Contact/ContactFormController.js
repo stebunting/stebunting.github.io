@@ -1,12 +1,10 @@
-/* global grecaptcha */
 import React, { useState, useEffect } from 'react';
 import validate from '../../helpers/functions/validate';
 import ContactForm from './ContactForm';
+import sendEmail from './sendMail';
 import statusMessages from './statusMessages';
 
 function ContactFormController() {
-  const gRecaptchaToken = process.env.RECAPTCHA_API_KEY;
-
   const [formDetails, setFormDetails] = useState({
     name: '',
     email: '',
@@ -24,38 +22,14 @@ function ContactFormController() {
     if (formDetails.nameValid && formDetails.emailValid && formDetails.messageValid) {
       setSending(true);
       setStatus(statusMessages.SENDING);
-      const payload = {
-        name: formDetails.name,
-        email: formDetails.email,
-        message: formDetails.message
-      };
-
-      grecaptcha.ready(() => {
-        grecaptcha.execute(gRecaptchaToken, { action: 'send_message' })
-          .then((token) => {
-            payload.greptchaToken = token;
-
-            fetch('https://rfxp-api.herokuapp.com/contact/', {
-              method: 'post',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(payload)
-            }).then((response) => response.json())
-              .then((data) => {
-                setSending(false);
-                if (data.status === 'OK') {
-                  setStatus(statusMessages.EMAIL_SENT);
-                } else {
-                  setStatus(statusMessages.ERROR);
-                }
-              })
-              .catch(() => {
-                setSending(false);
-                setStatus(statusMessages.ERROR);
-              });
-          });
-      });
+      sendEmail(formDetails)
+        .then((data) => {
+          setSending(false);
+          setStatus(data.status === 'OK' ? statusMessages.EMAIL_SENT : statusMessages.ERROR);
+        }).catch(() => {
+          setSending(false);
+          setStatus(statusMessages.ERROR);
+        });
     } else {
       setStatus(statusMessages.INVALID_INPUT);
     }
