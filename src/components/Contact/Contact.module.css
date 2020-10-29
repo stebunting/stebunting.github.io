@@ -10,11 +10,13 @@ form {
 
 label {
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
 }
 
 .labelText {
-  padding-top: 10px;
+  display: flex;
+  padding: 10px 0 8px 0;
 }
 
 .contactForm {
@@ -64,4 +66,16 @@ footer {
   text-align: center;
   color: #757575;
   font-size: 0.8em;
+}
+
+@media (min-width: 800px) {
+  label {
+    flex-flow: row nowrap;
+  }
+
+  .labelText {
+    justify-content: flex-end;
+    width: 164px;
+    padding-right: 0.7em;
+  }
 }

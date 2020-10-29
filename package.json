@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development",
+    "ngrok": "ngrok http 3000 -host-header=\"localhost:3000\"",
     "build": "webpack --mode production",
     "test": "jest --coverage"
   },

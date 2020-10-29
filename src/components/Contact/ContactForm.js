@@ -37,8 +37,7 @@ function ContactForm({
         />
         <Status status={status} />
         <div className={css.formElement}>
-          {''.padStart(16, '\u00a0')}
-          &nbsp;
+          <span className={css.labelText} />
           <input
             type="submit"
             id="submit"

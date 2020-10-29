@@ -12,10 +12,20 @@ function Menu({
   return (
     <ul>
       <li>
-        <Arrow id={name} expanded={expanded} clickHandler={handleClick} />
-        <span className={css.keyword}>const</span>
-        &nbsp;
-        {name}
+        <span
+          className={css.menuDropdown}
+          role="button"
+          tabIndex="0"
+          onClick={() => handleClick(name)}
+          onKeyDown={(event) => {
+            if (event.key === ' ') handleClick(name);
+          }}
+        >
+          <Arrow expanded={expanded} />
+          <span className={css.keyword}>const</span>
+          &nbsp;
+          {name}
+        </span>
         &nbsp;= [
         <ul className={classes}>
           {children}

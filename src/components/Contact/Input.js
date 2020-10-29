@@ -8,10 +8,7 @@ function Input({
   return (
     <div className={css.formElement}>
       <label htmlFor={name}>
-        <span className={css.labelText}>
-          {`const ${name} =`.padStart(16, '\u00a0')}
-          &nbsp;
-        </span>
+        <span className={css.labelText}>{`const ${name} =`}</span>
         {React.createElement(
           type === 'textarea' ? 'textarea' : 'input',
           {

@@ -13,10 +13,7 @@ function Status({ status }) {
   return (
     <div className={css.formElement}>
       <label htmlFor="status">
-        <span className={css.labelText}>
-          {'const status ='.padStart(16, '\u00a0')}
-          &nbsp;
-        </span>
+        <span className={css.labelText}>const status =</span>
         <input
           id="status"
           name="status"

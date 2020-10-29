@@ -49,3 +49,7 @@ svg.menuFolded {
 .currentPage {
   color: #f00;
 }
+
+.menuDropdown:focus {
+  cursor: pointer;
+}

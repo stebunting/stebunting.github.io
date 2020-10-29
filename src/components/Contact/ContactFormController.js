@@ -57,16 +57,16 @@ function ContactFormController() {
           });
       });
     } else {
-      setStatus(setStatus.INVALID_INPUT);
+      setStatus(statusMessages.INVALID_INPUT);
     }
   }
 
   function getStatus() {
-    // if (formDetails.name === '' && formDetails.email === '' && formDetails.message === '') {
-    //   return '';
-    // }
     if (formDetails.nameValid && formDetails.emailValid && formDetails.messageValid) {
       return statusMessages.VALID_INPUT;
+    }
+    if (status === statusMessages.INVALID_INPUT) {
+      return statusMessages.INVALID_INPUT;
     }
     return statusMessages.UNDEFINED;
   }
