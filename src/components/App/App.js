@@ -1,8 +1,6 @@
 import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-
 import './App.css';
-
 import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
 import About from '../About/About';

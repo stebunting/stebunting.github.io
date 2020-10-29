@@ -100,6 +100,7 @@
   }],
   "technologies": [{
     "type": "code",
+    "description": "scripting and programming languages I have experience with",
     "members": [
       { "name": "JavaScript", "imgUrl": "js.png" },
       { "name": "Python", "imgUrl": "python.png" },
@@ -111,16 +112,19 @@
     ]
   }, {
     "type": "data",
+    "description": "databases I have leveraged",
     "members": [
       { "name": "MongoDB", "imgUrl": "mongodb.png" },
       { "name": "MySQL", "imgUrl": "mysql.png" }
     ]
   }, {
     "type": "frameworks",
+    "description": "frameworks, libraries and toolkits I regularly utilise",
     "members": [
       { "name": "Node.js", "imgUrl": "nodejs.png" },
       { "name": "Express", "imgUrl": "express.png" },
       { "name": "React", "imgUrl": "react.png" },
+      { "name": "Mocha", "imgUrl": "mocha.svg" },
       { "name": "Flask", "imgUrl": "flask.png" },
       { "name": "jQuery", "imgUrl": "jquery.png" },
       { "name": "Bootstrap", "imgUrl": "bootstrap.svg" },
@@ -129,11 +133,13 @@
     ]
   }, {
     "type": "deployment",
+    "description": "my favourite tools for deployment and CI/CD",
     "members": [
       { "name": "Git", "imgUrl": "git.png" },
       { "name": "GitHub", "imgUrl": "github.png" },
       { "name": "Travis-CI", "imgUrl": "travis.png" },
-      { "name": "Heroku", "imgUrl": "heroku.svg" }
+      { "name": "Heroku", "imgUrl": "heroku.svg" },
+      { "name": "cPanel", "imgUrl": "cpanel.svg" }
     ]
   }]
 }

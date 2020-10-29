@@ -39,6 +39,7 @@ function Technology({ data }) {
 Technology.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     members: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       imgUrl: PropTypes.string

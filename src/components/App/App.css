@@ -42,9 +42,10 @@ h2 {
   padding-right: 0.5em;
 }
 
+/* MAIN POSITIONING CONTAINERS */
 .container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
 }
 
 .main,
@@ -53,16 +54,22 @@ h2 {
   padding: 1em;
 }
 
-.sidebar {
-  height: 100vh;
-}
-
 .main {
   display: flex;
   flex-flow: column nowrap;
   flex: 1;
   background-color: #232323;
   padding: 1em;
+}
+
+@media (min-width: 800px) {
+  .container {
+    flex-flow: row nowrap;
+  }
+
+  .sidebar {
+    height: 100vh;
+  }
 }
 
 .grecaptcha-badge {
@@ -77,6 +84,10 @@ h2 {
 
 .projectTitle {
   font-size: 1.4em;
+}
+
+.projectDescription {
+  color: #909090;
 }
 
 .project {
