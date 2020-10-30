@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TechnologyItem from './TechnologyItem';
+import TechnologyDetailElement from './TechnologyDetailElement';
 import css from './Technology.module.css';
 
-function TechnologyDetail({ open, data }) {
+function TechnologyDetail({
+  data,
+  open,
+  isOpening,
+  visibleElement,
+  leavingElement
+}) {
   const classes = {
     open: `${css.technologyDetail} ${css.technologyDetailOpen}`,
     closed: css.technologyDetail
@@ -11,22 +17,19 @@ function TechnologyDetail({ open, data }) {
 
   return (
     <div className={open ? classes.open : classes.closed}>
-      <div className={`${css.technologyDetail} ${css.technologyDetailOpen}`}>
-        <div className={css.technologyTitle}>
-          {data[0].type}
-        </div>
-        <div className={css.technologyDescription}>
-          {data[0].description}
-        </div>
-        <div className={css.technologyItems}>
-          {data[0].members.map((x) => <TechnologyItem key={x.name} item={x} />)}
-        </div>
-      </div>
+      {data.map((tech) => (
+        <TechnologyDetailElement
+          key={`${tech.type}Detail`}
+          isOpening={isOpening}
+          visible={tech.type === visibleElement}
+          leaving={tech.type === leavingElement}
+          data={tech}
+        />
+      ))}
     </div>
   );
 }
 TechnologyDetail.propTypes = {
-  open: PropTypes.bool.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
@@ -34,7 +37,11 @@ TechnologyDetail.propTypes = {
       name: PropTypes.string.isRequired,
       imgUrl: PropTypes.string
     })).isRequired
-  })).isRequired
+  })).isRequired,
+  open: PropTypes.bool.isRequired,
+  isOpening: PropTypes.bool.isRequired,
+  visibleElement: PropTypes.string.isRequired,
+  leavingElement: PropTypes.string.isRequired
 };
 
 export default TechnologyDetail;

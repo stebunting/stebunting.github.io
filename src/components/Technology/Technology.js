@@ -5,13 +5,23 @@ import TechnologyButtons from './TechnologyButtons';
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
 function Technology({ data }) {
-  const [detailElement, setDetailElement] = useState(data[0].type);
-  const [open, setOpen] = useState(false);
+  const [visibleElement, setVisibleElement] = useState(data[0].type);
+  const [leavingElement, setLeavingElement] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpening, setIsOpening] = useState(false);
 
   function handleClick(event) {
     const id = event.target.id.replace('Button', '');
-    setOpen(detailElement === id || !open ? !open : open);
-    setDetailElement(detailElement === id ? detailElement : id);
+
+    const opening = !isOpen;
+    const closing = isOpen && visibleElement === id;
+    const newElement = visibleElement === id ? visibleElement : id;
+    const leaving = closing ? '' : leavingElement;
+
+    setIsOpening(opening);
+    setIsOpen(closing || opening ? !isOpen : isOpen);
+    setLeavingElement(newElement !== visibleElement ? visibleElement : leaving);
+    setVisibleElement(newElement);
   }
 
   return (
@@ -21,8 +31,11 @@ function Technology({ data }) {
         <Typewriter text="Technology" />
       </h2>
       <TechnologyDetail
-        open={open}
-        data={data.filter((tech) => tech.type === detailElement)}
+        open={isOpen}
+        visibleElement={visibleElement}
+        leavingElement={leavingElement}
+        isOpening={isOpening}
+        data={data}
       />
       <TechnologyButtons
         data={data}

@@ -7,7 +7,7 @@ function TechnologyButtons({ data, handleClick }) {
     <div className={css.technologyButtons}>
       {data.map((tech) => (
         <button
-          key={tech.type}
+          key={`${tech.type}Button`}
           id={`${tech.type}Button`}
           type="button"
           className={css.technologyButton}
