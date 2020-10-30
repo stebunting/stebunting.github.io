@@ -51,6 +51,6 @@ svg.menuFolded {
   color: #f00;
 }
 
-.menuDropdown:focus {
+.menuDropdown {
   cursor: pointer;
 }

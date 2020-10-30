@@ -10,13 +10,11 @@ function TechnologyDetail({
   visibleElement,
   leavingElement
 }) {
-  const classes = {
-    open: `${css.technologyDetail} ${css.technologyDetailOpen}`,
-    closed: css.technologyDetail
-  };
+  const classes = [css.technologyDetail];
+  if (open) classes.push(css.technologyDetailOpen);
 
   return (
-    <div className={open ? classes.open : classes.closed}>
+    <div className={classes.join(' ')}>
       {data.map((tech) => (
         <TechnologyDetailElement
           key={`${tech.type}Detail`}

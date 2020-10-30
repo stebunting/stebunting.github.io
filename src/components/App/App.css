@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 /* MAIN LAYOUT CSS STYLING */
 body {
@@ -7,7 +6,6 @@ body {
   color: #fff;
   margin: 0;
   font: 1em "Roboto Mono", monospace;
-  overflow: hidden;
 }
 
 a,
@@ -50,16 +48,25 @@ h2 {
 }
 
 /* MAIN POSITIONING CONTAINERS */
+#root {
+  height: 100vh;
+}
+
 .container {
+  min-height: 100%;
   display: flex;
   flex-flow: column nowrap;
-  height: 100%;
 }
 
 .main,
 .sidebar {
   box-sizing: border-box;
   padding: 1em;
+}
+
+.sidebar {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .main {
@@ -72,10 +79,6 @@ h2 {
 @media (min-width: 800px) {
   .container {
     flex-flow: row nowrap;
-  }
-
-  .sidebar {
-    height: 100vh;
   }
 
   .main,
