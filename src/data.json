@@ -118,13 +118,18 @@
       { "name": "MySQL", "imgUrl": "mysql.png" }
     ]
   }, {
+    "type": "testing",
+    "description": "testing frameworks I like",
+    "members": [
+      { "name": "Mocha", "imgUrl": "mocha.svg" }
+    ]
+  }, {
     "type": "frameworks",
-    "description": "frameworks, libraries and toolkits I regularly utilise",
+    "description": "frameworks, libraries and toolkits I rely on",
     "members": [
       { "name": "Node.js", "imgUrl": "nodejs.png" },
       { "name": "Express", "imgUrl": "express.png" },
       { "name": "React", "imgUrl": "react.png" },
-      { "name": "Mocha", "imgUrl": "mocha.svg" },
       { "name": "Flask", "imgUrl": "flask.png" },
       { "name": "jQuery", "imgUrl": "jquery.png" },
       { "name": "Bootstrap", "imgUrl": "bootstrap.svg" },

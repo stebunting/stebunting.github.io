@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import TechnologyDetail from './TechnologyDetail';
+import TechnologyButtons from './TechnologyButtons';
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 
 function Technology({ data }) {
-  const [openElement, setOpenElement] = useState(null);
+  const [detailElement, setDetailElement] = useState(data[0].type);
+  const [open, setOpen] = useState(false);
 
   function handleClick(event) {
-    const { id } = event.target;
-    setOpenElement(openElement === id ? null : id);
+    const id = event.target.id.replace('Button', '');
+    setOpen(detailElement === id || !open ? !open : open);
+    setDetailElement(detailElement === id ? detailElement : id);
   }
-
-  const compareFunction = (a, b) => {
-    if (a.type === openElement) return -1;
-    if (b.type === openElement) return 1;
-    return 0;
-  };
 
   return (
     <div className="main">
@@ -23,16 +20,14 @@ function Technology({ data }) {
         <span className="prompt">$</span>
         <Typewriter text="Technology" />
       </h2>
-      <div className="detailContainer">
-        {data.sort(compareFunction).map((tech) => (
-          <TechnologyDetail
-            key={tech.type}
-            data={tech}
-            open={openElement === tech.type}
-            handleClick={handleClick}
-          />
-        ))}
-      </div>
+      <TechnologyDetail
+        open={open}
+        data={data.filter((tech) => tech.type === detailElement)}
+      />
+      <TechnologyButtons
+        data={data}
+        handleClick={handleClick}
+      />
     </div>
   );
 }

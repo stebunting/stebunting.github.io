@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import css from './Technology.module.css';
 
 function TechnologyItem({ item }) {
   const image = item.imgUrl != null
@@ -12,7 +13,7 @@ function TechnologyItem({ item }) {
     ) : '';
 
   return (
-    <div className="projectItem">
+    <div className={css.technologyItem}>
       {image}
       {item.name}
     </div>
