@@ -24,7 +24,7 @@ function TechnologyDetailElement({
   return (
     <div className={classes.join(' ')}>
       <div className={css.title}>
-        {data.type}
+        {data.name}
       </div>
       <div className={css.description}>
         {data.description}
@@ -37,7 +37,7 @@ function TechnologyDetailElement({
 }
 TechnologyDetailElement.propTypes = {
   data: PropTypes.shape({
-    type: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     members: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,

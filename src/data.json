@@ -99,7 +99,7 @@
     ]
   }],
   "technologies": [{
-    "type": "code",
+    "name": "code",
     "description": "scripting and programming languages I have experience with",
     "members": [
       { "name": "JavaScript", "imgUrl": "js.png" },
@@ -111,20 +111,20 @@
       { "name": "CSS", "imgUrl": "css.png" }
     ]
   }, {
-    "type": "data",
+    "name": "data",
     "description": "databases I have leveraged",
     "members": [
       { "name": "MongoDB", "imgUrl": "mongodb.png" },
       { "name": "MySQL", "imgUrl": "mysql.png" }
     ]
   }, {
-    "type": "testing",
+    "name": "testing",
     "description": "testing frameworks I like",
     "members": [
       { "name": "Mocha", "imgUrl": "mocha.svg" }
     ]
   }, {
-    "type": "frameworks",
+    "name": "frameworks",
     "description": "frameworks, libraries and toolkits I rely on",
     "members": [
       { "name": "Node.js", "imgUrl": "nodejs.png" },
@@ -137,7 +137,7 @@
       { "name": "Firebase", "imgUrl": "firebase.png" }
     ]
   }, {
-    "type": "deployment",
+    "name": "deployment",
     "description": "my favourite tools for deployment and CI/CD",
     "members": [
       { "name": "Git", "imgUrl": "git.png" },

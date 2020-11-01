@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Technology.module.css';
 
-function TechnologyButtons({ technologies, handleClick }) {
+function TechnologyButtons({ data, handleClick }) {
   return (
     <div className={css.buttons}>
-      {technologies.map((technology) => (
+      {data.map((technology) => (
         <button
           key={`${technology}Button`}
           id={`${technology}Button`}
@@ -20,7 +20,7 @@ function TechnologyButtons({ technologies, handleClick }) {
   );
 }
 TechnologyButtons.propTypes = {
-  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClick: PropTypes.func.isRequired
 };
 
