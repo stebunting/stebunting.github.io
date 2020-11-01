@@ -13,7 +13,7 @@ function TechnologyItem({ item }) {
     ) : '';
 
   return (
-    <div className={css.technologyItem}>
+    <div className={css.item}>
       {image}
       {item.name}
     </div>

@@ -2,32 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Technology.module.css';
 
-function TechnologyButtons({ data, handleClick }) {
+function TechnologyButtons({ technologies, handleClick }) {
   return (
-    <div className={css.technologyButtons}>
-      {data.map((tech) => (
+    <div className={css.buttons}>
+      {technologies.map((technology) => (
         <button
-          key={`${tech.type}Button`}
-          id={`${tech.type}Button`}
+          key={`${technology}Button`}
+          id={`${technology}Button`}
           type="button"
-          className={css.technologyButton}
+          className={css.button}
           onClick={handleClick}
         >
-          {tech.type}
+          {technology}
         </button>
       ))}
     </div>
   );
 }
 TechnologyButtons.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
-    type: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    members: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      imgUrl: PropTypes.string
-    })).isRequired
-  })).isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClick: PropTypes.func.isRequired
 };
 

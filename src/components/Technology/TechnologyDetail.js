@@ -11,7 +11,7 @@ function TechnologyDetail({
   leavingElement,
   handleClick
 }) {
-  const classes = [css.technologyDetail];
+  const classes = [css.detail];
   if (open != null) {
     if (open) classes.push(css.open);
     if (!open) classes.push(css.closed);

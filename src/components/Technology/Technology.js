@@ -41,7 +41,7 @@ function Technology({ data }) {
         handleClick={handleClick}
       />
       <TechnologyButtons
-        data={data}
+        technologies={data.map((tech) => tech.type)}
         handleClick={handleClick}
       />
     </div>

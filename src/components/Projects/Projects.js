@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typewriter from '../../helpers/Typewriter/Typewriter';
+import ProjectButtons from './ProjectButtons';
 
 function Projects({ data }) {
-  const elements = data.map((project) => (
-    <div className="project" key={project.name}>
-      <div className="projectTitle">{project.name}</div>
-    </div>
-  ));
+  function handleClick() {}
 
   return (
     <div className="main">
@@ -15,9 +12,10 @@ function Projects({ data }) {
         <span className="prompt">$</span>
         <Typewriter text="Projects" />
       </h2>
-      <div className="detailContainer">
-        {elements}
-      </div>
+      <ProjectButtons
+        projects={data.map((project) => project.name)}
+        handleClick={handleClick}
+      />
     </div>
   );
 }

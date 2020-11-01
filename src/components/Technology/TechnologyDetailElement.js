@@ -9,7 +9,7 @@ function TechnologyDetailElement({
   visible,
   leaving
 }) {
-  const classes = [css.technologyDetailElement];
+  const classes = [css.detailElement];
   if (visible) {
     if (isOpeningOrClosing) {
       classes.push(css.visible);
@@ -23,13 +23,13 @@ function TechnologyDetailElement({
 
   return (
     <div className={classes.join(' ')}>
-      <div className={css.technologyTitle}>
+      <div className={css.title}>
         {data.type}
       </div>
-      <div className={css.technologyDescription}>
+      <div className={css.description}>
         {data.description}
       </div>
-      <div className={css.technologyItems}>
+      <div className={css.items}>
         {data.members.map((x) => <TechnologyItem key={x.name} item={x} />)}
       </div>
     </div>
