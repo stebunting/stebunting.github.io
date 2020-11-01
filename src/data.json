@@ -28,7 +28,7 @@
     "thumbImg": "",
     "description": "Presave campaign for Naomi Lien's new track release, enabling fans to autosave to Spotify, Apple Music and Deezer on release date.",
     "homepage": "http://opensourcemuzic.com/dnn/",
-    "github": "",
+    "github": [],
 		"date": "April 2020",
     "technologies": [
       "JavaScript",
@@ -43,7 +43,7 @@
     "thumbImg": "",
     "description": "An Android / iOS application for calculating and verifying inter-modulations and avoiding clashes with local broadcasting when setting up touring radio microphone systems.",
     "homepage": "http://rfxp.stevebunting.com/",
-    "github": "",
+    "github": [],
     "date": "February - April 2020",
     "technologies": [
       "Java",
@@ -55,7 +55,9 @@
     "thumbImg": "",
     "description": "An OS X application to convert, process and file exported files from radio scanners for use in radio microphone and in-ear monitoring configuration.",
     "homepage": "https://rflibrary.stevebunting.com/",
-    "github": "https://github.com/stebunting/rf-library",
+    "github": [
+      "https://github.com/stebunting/rf-library"
+    ],
     "date": "March 2017 - August 2019",
     "technologies": [
       "Python",
@@ -66,7 +68,9 @@
     "thumbImg": "",
     "description": "A web app for retrieving historical exchange rates and displaying them in a usable way for efficient book-keeping.",
     "homepage": "http://hfx.stevebunting.com",
-    "github": "https://github.com/stebunting/hfx",
+    "github": [
+      "https://github.com/stebunting/hfx"
+    ],
     "date": "June 2017",
     "technologies": [
       "Python",
@@ -85,7 +89,9 @@
     "description": "A web application for keeping track of LSE-based share portfolios. Gets up-to-date data from ADVFN and logs it to a database to track portfolios and compare to indices. Final project for CS50.",
     "homepage": "http://sharetrader.stevebunting.com",
     "youtube": "https://www.youtube.com/watch?v=F2OheR7O0CE",
-    "github": "https://github.com/stebunting/share-trader",
+    "github": [
+      "https://github.com/stebunting/share-trader"
+    ],
     "date": "April 2017",
     "technologies": [
       "Python",

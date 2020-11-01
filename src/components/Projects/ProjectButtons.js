@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Project.module.css';
 
-function ProjectButtons({ projects, handleClick }) {
+function ProjectButtons({ data, handleClick }) {
   return (
     <div className={css.buttons}>
-      {projects.map((project) => (
+      {data.map((project) => (
         <button
           key={`${project}Button`}
           id={`${project}Button`}
@@ -20,7 +20,7 @@ function ProjectButtons({ projects, handleClick }) {
   );
 }
 ProjectButtons.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.string).isRequired,
+  data: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClick: PropTypes.func.isRequired
 };
 

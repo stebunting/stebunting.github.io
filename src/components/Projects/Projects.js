@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typewriter from '../../helpers/Typewriter/Typewriter';
+import ProjectDetailElement from './ProjectDetailElement';
 import ProjectButtons from './ProjectButtons';
+import Dropdown from '../Dropdown/Dropdown';
 
-function Projects({ data }) {
-  function handleClick() {}
-
+function Projects({
+  data
+}) {
   return (
     <div className="main">
       <h2>
         <span className="prompt">$</span>
         <Typewriter text="Projects" />
       </h2>
-      <ProjectButtons
-        projects={data.map((project) => project.name)}
-        handleClick={handleClick}
+      <Dropdown
+        data={data}
+        detailElement={ProjectDetailElement}
+        buttonElement={ProjectButtons}
       />
     </div>
   );
