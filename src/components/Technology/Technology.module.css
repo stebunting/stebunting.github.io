@@ -7,6 +7,7 @@
 }
 
 .technologyButton {
+  font: 1em "Roboto Mono", monospace;
   display: inline-block;
   background-color: #232323;
   color: #fff;
@@ -23,6 +24,7 @@
 }
 
 .technologyDetail {
+  background-color: #232323;
   position: relative;
   display: flex;
   border: 1px #aaa solid;
@@ -30,11 +32,16 @@
   height: 0;
   overflow: hidden;
   opacity: 0;
+}
+
+.technologyDetail.closed {
+  height: 0;
+  opacity: 0;
   transition: opacity 1.5s;
   animation: slideClosed 1s;
 }
 
-.technologyDetail.technologyDetailOpen {
+.technologyDetail.open {
   min-height: 250px;
   animation: slideOpen 1s;
   opacity: 1;
@@ -77,12 +84,30 @@
 
 .technologyDetailElement.entering {
   transform: translateX(0);
-  transition: transform 1s;
+  animation: slideIn 1s;
 }
 
 .technologyDetailElement.leaving {
   transform: translateX(100%);
-  transition: transform 1s;
+  animation: slideOut 1s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .technologyTitle {

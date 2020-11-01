@@ -5,19 +5,21 @@ import css from './Technology.module.css';
 
 function TechnologyDetailElement({
   data,
-  isOpening,
+  isOpeningOrClosing,
   visible,
   leaving
 }) {
   const classes = [css.technologyDetailElement];
   if (visible) {
-    if (isOpening) {
+    if (isOpeningOrClosing) {
       classes.push(css.visible);
     } else {
       classes.push(css.entering);
     }
   }
-  if (leaving && !isOpening) classes.push(css.leaving);
+  if (leaving && !isOpeningOrClosing) {
+    classes.push(css.leaving);
+  }
 
   return (
     <div className={classes.join(' ')}>
@@ -42,7 +44,7 @@ TechnologyDetailElement.propTypes = {
       imgUrl: PropTypes.string
     })).isRequired
   }).isRequired,
-  isOpening: PropTypes.bool.isRequired,
+  isOpeningOrClosing: PropTypes.bool.isRequired,
   visible: PropTypes.bool.isRequired,
   leaving: PropTypes.bool.isRequired
 };

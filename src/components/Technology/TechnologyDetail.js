@@ -6,19 +6,32 @@ import css from './Technology.module.css';
 function TechnologyDetail({
   data,
   open,
-  isOpening,
+  isOpeningOrClosing,
   visibleElement,
-  leavingElement
+  leavingElement,
+  handleClick
 }) {
   const classes = [css.technologyDetail];
-  if (open) classes.push(css.technologyDetailOpen);
+  if (open != null) {
+    if (open) classes.push(css.open);
+    if (!open) classes.push(css.closed);
+  }
 
   return (
-    <div className={classes.join(' ')}>
+    <div
+      className={classes.join(' ')}
+      id="detail"
+      onClick={handleClick}
+      onKeyDown={(event) => {
+        if (event.key === ' ') handleClick(event);
+      }}
+      role="button"
+      tabIndex="0"
+    >
       {data.map((tech) => (
         <TechnologyDetailElement
           key={`${tech.type}Detail`}
-          isOpening={isOpening}
+          isOpeningOrClosing={isOpeningOrClosing}
           visible={tech.type === visibleElement}
           leaving={tech.type === leavingElement}
           data={tech}
@@ -36,10 +49,14 @@ TechnologyDetail.propTypes = {
       imgUrl: PropTypes.string
     })).isRequired
   })).isRequired,
-  open: PropTypes.bool.isRequired,
-  isOpening: PropTypes.bool.isRequired,
+  open: PropTypes.bool,
+  isOpeningOrClosing: PropTypes.bool.isRequired,
   visibleElement: PropTypes.string.isRequired,
-  leavingElement: PropTypes.string.isRequired
+  leavingElement: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
+};
+TechnologyDetail.defaultProps = {
+  open: null
 };
 
 export default TechnologyDetail;
