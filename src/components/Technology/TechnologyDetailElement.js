@@ -3,26 +3,9 @@ import PropTypes from 'prop-types';
 import TechnologyItem from './TechnologyItem';
 import css from './Technology.module.css';
 
-function TechnologyDetailElement({
-  data,
-  isOpeningOrClosing,
-  visible,
-  leaving
-}) {
-  const classes = [css.detailElement];
-  if (visible) {
-    if (isOpeningOrClosing) {
-      classes.push(css.visible);
-    } else {
-      classes.push(css.entering);
-    }
-  }
-  if (leaving && !isOpeningOrClosing) {
-    classes.push(css.leaving);
-  }
-
+function TechnologyDetailElement({ data, dropdownClasses }) {
   return (
-    <div className={classes.join(' ')}>
+    <div className={dropdownClasses}>
       <div className={css.title}>
         {data.name}
       </div>
@@ -44,9 +27,7 @@ TechnologyDetailElement.propTypes = {
       imgUrl: PropTypes.string
     })).isRequired
   }).isRequired,
-  isOpeningOrClosing: PropTypes.bool.isRequired,
-  visible: PropTypes.bool.isRequired,
-  leaving: PropTypes.bool.isRequired
+  dropdownClasses: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default TechnologyDetailElement;

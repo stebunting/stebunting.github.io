@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import DropdownDetail from './DropdownDetail';
 import css from './Dropdown.module.css';
 
 function Dropdown({ data, detailElement, buttonElement }) {
@@ -42,13 +43,13 @@ function Dropdown({ data, detailElement, buttonElement }) {
         tabIndex="0"
       >
         {data.map((item) => (
-          React.createElement(detailElement, {
-            data: item,
-            key: `${item.name}Detail`,
-            isOpeningOrClosing,
-            visible: item.name === visibleElement,
-            leaving: item.name === leavingElement
-          })
+          <DropdownDetail
+            item={item}
+            isOpeningOrClosing={isOpeningOrClosing}
+            visible={item.name === visibleElement}
+            leaving={item.name === leavingElement}
+            detailElement={detailElement}
+          />
         ))}
       </div>
       {React.createElement(buttonElement, {

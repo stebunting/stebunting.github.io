@@ -38,3 +38,45 @@
     min-height: 0;
   }
 }
+
+/* DETAIL ELEMENT OVERVIEW */
+.detailElement {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  transform: translateX(-100%);
+}
+.detailElement.visible {
+  transform: translateX(0);
+}
+.detailElement.entering {
+  transform: translateX(0);
+  animation: slideIn 1s;
+}
+.detailElement.leaving {
+  transform: translateX(100%);
+  animation: slideOut 1s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
