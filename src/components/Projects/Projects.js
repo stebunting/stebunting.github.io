@@ -27,8 +27,10 @@ Projects.propTypes = {
     name: PropTypes.string.isRequired,
     thumbImg: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    homepage: PropTypes.string.isRequired,
-    github: PropTypes.arrayOf(PropTypes.string).isRequired,
+    links: PropTypes.arrayOf(PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired
+    })).isRequired,
     date: PropTypes.string.isRequired,
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired
   })).isRequired

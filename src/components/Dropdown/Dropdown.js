@@ -44,6 +44,7 @@ function Dropdown({ data, detailElement, buttonElement }) {
       >
         {data.map((item) => (
           <DropdownDetail
+            key={`${item.name}Detail`}
             item={item}
             isOpeningOrClosing={isOpeningOrClosing}
             visible={item.name === visibleElement}

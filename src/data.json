@@ -1,12 +1,12 @@
 {
   "projects": [{
     "name": "whisk.se",
-    "thumbImg": "",
+    "thumbImg": "whisk.png",
     "description": "A website and web store for an eco-conscious bakery in Stockholm",
-    "homepage": "https://whisk.se/",
-    "github": [
-      "https://github.com/stebunting/whiskse",
-      "https://github.com/stebunting/whisk-management"
+    "links": [
+      { "type": "homepage", "link": "https://whisk.se/" },
+      { "type": "github", "link": "https://github.com/stebunting/whiskse" },
+      { "type": "github", "link": "https://github.com/stebunting/whisk-management" }
     ],
     "date": "May - June 2020",
     "technologies": [
@@ -25,10 +25,11 @@
     ]
   }, {
     "name": "Naomi Lien Presave",
-    "thumbImg": "",
+    "thumbImg": "dnn.png",
     "description": "Presave campaign for Naomi Lien's new track release, enabling fans to autosave to Spotify, Apple Music and Deezer on release date.",
-    "homepage": "http://opensourcemuzic.com/dnn/",
-    "github": [],
+    "links": [
+      { "type": "homepage", "link": "http://opensourcemuzic.com/dnn/"}
+    ],
 		"date": "April 2020",
     "technologies": [
       "JavaScript",
@@ -40,10 +41,11 @@
     ]
   }, {
     "name": "RFXp",
-    "thumbImg": "",
+    "thumbImg": "rfxp.jpg",
     "description": "An Android / iOS application for calculating and verifying inter-modulations and avoiding clashes with local broadcasting when setting up touring radio microphone systems.",
-    "homepage": "http://rfxp.stevebunting.com/",
-    "github": [],
+    "links": [
+      { "type": "homepage", "link": "http://rfxp.stevebunting.com/" }
+    ],
     "date": "February - April 2020",
     "technologies": [
       "Java",
@@ -52,11 +54,11 @@
     ]
   }, {
     "name": "RF Library",
-    "thumbImg": "",
+    "thumbImg": "rflibrary.png",
     "description": "An OS X application to convert, process and file exported files from radio scanners for use in radio microphone and in-ear monitoring configuration.",
-    "homepage": "https://rflibrary.stevebunting.com/",
-    "github": [
-      "https://github.com/stebunting/rf-library"
+    "links": [
+      { "type": "homepage", "link": "https://rflibrary.stevebunting.com/" },
+      { "type": "github", "link": "https://github.com/stebunting/rf-library" }
     ],
     "date": "March 2017 - August 2019",
     "technologies": [
@@ -65,11 +67,11 @@
     ]
   }, {
     "name": "HFx",
-    "thumbImg": "",
+    "thumbImg": "hfx.png",
     "description": "A web app for retrieving historical exchange rates and displaying them in a usable way for efficient book-keeping.",
-    "homepage": "http://hfx.stevebunting.com",
-    "github": [
-      "https://github.com/stebunting/hfx"
+    "links": [
+      { "type": "homepage", "link": "http://hfx.stevebunting.com" },
+      { "type": "github", "link": "https://github.com/stebunting/hfx" }
     ],
     "date": "June 2017",
     "technologies": [
@@ -85,12 +87,12 @@
     ]
   }, {
     "name": "Share Trader",
-    "thumbImg": "",
+    "thumbImg": "sharetrader.png",
     "description": "A web application for keeping track of LSE-based share portfolios. Gets up-to-date data from ADVFN and logs it to a database to track portfolios and compare to indices. Final project for CS50.",
-    "homepage": "http://sharetrader.stevebunting.com",
-    "youtube": "https://www.youtube.com/watch?v=F2OheR7O0CE",
-    "github": [
-      "https://github.com/stebunting/share-trader"
+    "links": [
+      { "type": "homepage", "link": "http://sharetrader.stevebunting.com" },
+      { "type": "youtube", "link": "https://www.youtube.com/watch?v=F2OheR7O0CE" },
+      { "type": "github", "link": "https://github.com/stebunting/share-trader" }
     ],
     "date": "April 2017",
     "technologies": [

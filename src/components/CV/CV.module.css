@@ -1,0 +1,15 @@
+.cvList {
+  list-style-type: none;
+  padding-left: 2em;
+}
+
+.cvList li:before {
+  content: "~ ";
+  color: red;
+  margin-right: 0em;
+}
+
+.cvList li {
+  text-indent: -1em;
+  margin-bottom: 1em;
+}

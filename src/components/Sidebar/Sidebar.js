@@ -29,7 +29,6 @@ function Sidebar() {
   }, [main.edited, external.edited]);
 
   function handleClick(id) {
-    console.log('ok')
     if (id === 'main') {
       setMain({ expanded: !main.expanded, edited: true });
     } else if (id === 'external') {

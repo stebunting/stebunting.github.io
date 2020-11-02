@@ -27,7 +27,7 @@ TechnologyDetailElement.propTypes = {
       imgUrl: PropTypes.string
     })).isRequired
   }).isRequired,
-  dropdownClasses: PropTypes.arrayOf(PropTypes.string).isRequired
+  dropdownClasses: PropTypes.string.isRequired
 };
 
 export default TechnologyDetailElement;

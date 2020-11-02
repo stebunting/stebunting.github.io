@@ -15,7 +15,7 @@
   animation: slideClosed 1s;
 }
 .detail.open {
-  min-height: 250px;
+  min-height: 500px;
   opacity: 1;
   transition: opacity 1s;
   animation: slideOpen 1s;
@@ -26,13 +26,13 @@
     min-height: 0;
   }
   to {
-    min-height: 250px;
+    min-height: 500px;
   }
 }
 
 @keyframes slideClosed {
   from {
-    min-height: 250px;
+    min-height: 500px;
   }
   to {
     min-height: 0;
