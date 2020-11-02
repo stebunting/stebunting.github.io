@@ -1,3 +1,5 @@
+@import "../App/Constants";
+
 /* BUTTONS */
 .buttons {
   display: flex;
@@ -12,44 +14,62 @@
   display: inline-block;
   background-color: #232323;
   color: #fff;
-  border: 1px #aaa solid;
+  border: 1px @greyColour solid;
   font-size: 1.4em;
   width: 250px;
   padding: 1em;
   margin: 10px 0;
   cursor: pointer;
+
+  &:hover {
+    background-color: mediumseagreen;
+  }
 }
-.button:hover {
-  background-color: mediumseagreen;
+
+/* DETAIL ELEMENT */
+.detailElement {
+  padding: 2em;
+  color: @greyColour;
+  text-align: center;
 }
 
 /* DETAIL ELEMENT SPECIFICS */
-.title {
+h3 {
   display: flex;
-  font-size: 1.4em;
   justify-content: center;
+  font-size: 1.4em;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.date {
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
 }
 
 .description {
   display: flex;
   justify-content: center;
-  color: #909090;
   text-align: center;
 }
 
-.items {
+.technologies,
+.links {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
 }
 
-.item {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px;
-}
-.item img {
-  margin-bottom: 8px;
+.linkSeperator {
+  white-space: pre;
 }

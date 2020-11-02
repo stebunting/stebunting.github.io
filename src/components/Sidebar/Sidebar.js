@@ -43,11 +43,11 @@ function Sidebar() {
       </h1>
       <nav>
         <Menu name="main" expanded={main.expanded} handleClick={handleClick}>
-          <MenuItem link="about" name="about" />
-          <MenuItem link="projects" name="projects" />
-          <MenuItem link="technology" name="technology" />
-          <MenuItem link="cv" name="cv" />
-          <MenuItem link="contact" name="contact" lastItem />
+          <MenuItem link="/about" name="about" />
+          <MenuItem link="/projects" name="projects" />
+          <MenuItem link="/technology" name="technology" />
+          <MenuItem link="/cv" name="cv" />
+          <MenuItem link="/contact" name="contact" lastItem />
         </Menu>
         <Menu name="external" expanded={external.expanded} handleClick={handleClick}>
           <MenuItem external link="https://www.linkedin.com/in/stevebunting/" name="linkedIn" />

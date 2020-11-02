@@ -18,21 +18,23 @@ module.exports = {
           }
         }
       }, {
-        test: /\.css$/,
+        test: /\.less$/,
         use: [
           'style-loader',
           {
             loader: 'css-loader',
             options: {
+              sourceMap: true,
               modules: true
             }
-          }
+          },
+          'less-loader'
         ],
-        include: /\.module\.css$/
+        include: /\.module\.less$/
       }, {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        exclude: /\.module\.css$/
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
+        exclude: /\.module\.less$/
       }
     ]
   },

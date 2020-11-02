@@ -10,10 +10,7 @@ function Projects({
 }) {
   return (
     <div className="main">
-      <h2>
-        <span className="prompt">$</span>
-        <Typewriter text="Projects" />
-      </h2>
+      <Typewriter text="Projects" />
       <Dropdown
         data={data}
         detailElement={ProjectDetailElement}

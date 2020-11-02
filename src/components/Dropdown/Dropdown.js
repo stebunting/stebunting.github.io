@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import DropdownDetail from './DropdownDetail';
-import css from './Dropdown.module.css';
+import css from './Dropdown.module.less';
 
-function Dropdown({ data, detailElement, buttonElement }) {
+function Dropdown({
+  data,
+  detailElement,
+  buttonElement
+}) {
   const [visibleElement, setVisibleElement] = useState(data[0].name);
   const [leavingElement, setLeavingElement] = useState('');
   const [isOpen, setIsOpen] = useState(null);

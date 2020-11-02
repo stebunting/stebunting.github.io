@@ -5,10 +5,7 @@ import ContactFormController from './ContactFormController';
 function Contact() {
   return (
     <div className="main">
-      <h2>
-        <span className="prompt">$</span>
-        <Typewriter text="Contact" />
-      </h2>
+      <Typewriter text="Contact" />
       <ContactFormController />
     </div>
   );

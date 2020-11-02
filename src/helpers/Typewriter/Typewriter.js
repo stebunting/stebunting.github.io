@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 
 function Typewriter({ text }) {
@@ -22,7 +22,7 @@ function Typewriter({ text }) {
     return () => clearInterval(timerId);
   }, [index]);
 
-  return value;
+  return <h2>{value}</h2>;
 }
 Typewriter.propTypes = {
   text: PropTypes.string.isRequired

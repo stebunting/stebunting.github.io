@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Technology.module.css';
+import css from './Technology.module.less';
 
 function TechnologyButtons({ data, handleClick }) {
   return (

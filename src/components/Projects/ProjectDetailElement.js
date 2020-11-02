@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Project.module.css';
+import css from './Project.module.less';
 
 function ProjectDetailElement({ data, dropdownClasses }) {
   return (

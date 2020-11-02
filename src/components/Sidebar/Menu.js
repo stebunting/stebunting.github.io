@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Sidebar.module.css';
+import css from './Sidebar.module.less';
 import Arrow from './Arrow';
 
 // Function to render a sidebar menu wrapper

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TechnologyItem from './TechnologyItem';
-import css from './Technology.module.css';
+import css from './Technology.module.less';
 
 function TechnologyDetailElement({ data, dropdownClasses }) {
   return (

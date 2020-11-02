@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Contact.module.css';
+import css from './Contact.module.less';
 
 function Input({
   type, name, value, valid, onChange

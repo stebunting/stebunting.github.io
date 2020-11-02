@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Dropdown.module.css';
+import css from './Dropdown.module.less';
 
 function DropdownDetail({
   item,

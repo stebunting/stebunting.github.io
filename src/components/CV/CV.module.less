@@ -1,0 +1,46 @@
+@import "../App/Constants";
+
+.cvSubheader {
+  color: @blueColour;
+  justify-content: left;
+  padding-top: 2em;
+
+  &:before {
+    content: "$";
+    color: @redColour;
+    padding-right: 0.5em;
+  }
+}
+.cvSubheader.top {
+  padding-top: 0;
+}
+
+.cvDetail {
+  color: @blueColour;
+  margin-right: 0.5em;
+}
+
+.cvAnchor {
+  color: @blueColour;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cvList {
+  list-style-type: none;
+  padding-left: 2em;
+
+  li {
+    text-indent: 0em;
+    margin-bottom: 1em;
+
+    &:before {
+      content: "~";
+      color: @redColour;
+      margin-right: 0.5em;
+    }
+  }
+}

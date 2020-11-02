@@ -8,10 +8,7 @@ import Dropdown from '../Dropdown/Dropdown';
 function Technology({ data }) {
   return (
     <div className="main">
-      <h2>
-        <span className="prompt">$</span>
-        <Typewriter text="Technology" />
-      </h2>
+      <Typewriter text="Technology" />
       <Dropdown
         data={data}
         detailElement={TechnologyDetailElement}

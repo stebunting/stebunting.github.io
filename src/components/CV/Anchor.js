@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import css from './CV.module.less';
 
 function Anchor({ name, link }) {
   return (
@@ -7,6 +8,7 @@ function Anchor({ name, link }) {
       href={link}
       target="_blank"
       rel="noreferrer"
+      className={css.cvAnchor}
     >
       {name}
     </a>

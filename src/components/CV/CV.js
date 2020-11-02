@@ -1,17 +1,14 @@
 import React from 'react';
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 import Anchor from './Anchor';
-import css from './CV.module.css';
+import css from './CV.module.less';
 
 function CV() {
   return (
     <div className="main">
-      <h2>
-        <span className="prompt">$</span>
-        <Typewriter text="CV" />
-      </h2>
+      <Typewriter text="CV" />
       <div>
-        <h3>About</h3>
+        <h3 className={[css.cvSubheader, css.top].join(' ')}>About</h3>
         <p>
           I have spent the last 15 years as a touring sound engineer, but have always pursued
           computer programming as a hobby and as a tool to help me and my colleagues in other
@@ -20,7 +17,7 @@ function CV() {
           professionals from all over the world and the technical skills I relied on daily.
         </p>
 
-        <h3>Programming Languages</h3>
+        <h3 className={css.cvSubheader}>Programming Languages</h3>
         <p>
           JavaScript / Node.js / React,
           Python / Flask,
@@ -29,10 +26,10 @@ function CV() {
           Web Scripting (PHP / HTML / CSS)
         </p>
 
-        <h3>Previous Projects</h3>
+        <h3 className={css.cvSubheader}>Previous Projects</h3>
         <ul className={css.cvList}>
           <li>
-            Whisk.se
+            <span className={css.cvDetail}>Whisk.se</span>
             A website and e-commerce store developed in Node.js with MongoDB and Swish integration
             for an eco-conscious bakery in Stockholm
             (
@@ -40,7 +37,7 @@ function CV() {
             )
           </li>
           <li>
-            OSM PreSave
+            <span className={css.cvDetail}>OSM PreSave</span>
             A web app in Node.js that automatically updates subscribed users’ Spotify, Apple Music
             or Deezer accounts with a customised playlist the day a track is released
             (
@@ -48,7 +45,7 @@ function CV() {
             )
           </li>
           <li>
-            ShareTrader
+            <span className={css.cvDetail}>ShareTrader</span>
             A web application for keeping track of LSE-based share portfolios build in Python with
             Flask. Retrieves up-to-date data from ADVFN and logs it to a MySQL database to track
             portfolios and compare to indices
@@ -57,7 +54,7 @@ function CV() {
             )
           </li>
           <li>
-            RFXp
+            <span className={css.cvDetail}>RFXp</span>
             An Android / iOS application for calculating and verifying inter- modulations and
             avoiding clashes with local broadcasting when setting up touring radio microphone
             systems
@@ -66,7 +63,7 @@ function CV() {
             )
           </li>
           <li>
-            RF Library
+            <span className={css.cvDetail}>RF Library</span>
             An OS X application to convert, process and organise exported files from radio scanners
             for use in radio microphone configuration for live events
             (
@@ -75,8 +72,8 @@ function CV() {
           </li>
         </ul>
 
-        <h3>Experience</h3>
-        <h4>Freelance Live Sound Engineer (2005 – 2020)</h4>
+        <h3 className={css.cvSubheader}>Experience</h3>
+        <h4 className={css.cvDetail}>Freelance Live Sound Engineer (2005 – 2020)</h4>
         <p>
           Primarily working as a monitor engineer and RF technician, I was responsible for mixing
           the on-stage sound directly for the artist for acts including Tom Jones, Little Mix,
@@ -125,7 +122,7 @@ function CV() {
           </li>
         </ul>
 
-        <h3>Education</h3>
+        <h3 className={css.cvSubheader}>Education</h3>
         <ul className={css.cvList}>
           <li>
             Short Courses in Node.js, React, Java, Android, iOS, AWS (Pluralsight/Udacity)
@@ -147,7 +144,7 @@ function CV() {
           </li>
         </ul>
 
-        <h3>Other</h3>
+        <h3 className={css.cvSubheader}>Other</h3>
         <ul className={css.cvList}>
           <li>
             I have an easy-going, friendly, approachable and helpful nature while maintaining
@@ -162,7 +159,7 @@ function CV() {
           </li>
         </ul>
 
-        <h3>Interests</h3>
+        <h3 className={css.cvSubheader}>Interests</h3>
         <p>
           My time on the road has inspired an interest in both photography and cookery. I also
           enjoy listening to many kinds of music in spare time, as well as playing the piano

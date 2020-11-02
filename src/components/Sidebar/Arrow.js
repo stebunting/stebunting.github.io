@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Sidebar.module.css';
+import css from './Sidebar.module.less';
 
 // Component to render an arrow
 // Points to right when menu closed, points down when menu open

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Contact.module.css';
+import css from './Contact.module.less';
 import statusMessages from './statusMessages';
 
 function Status({ status }) {

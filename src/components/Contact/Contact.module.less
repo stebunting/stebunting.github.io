@@ -1,3 +1,5 @@
+@import "../App/Constants";
+
 form {
   display: flex;
   flex-flow: column nowrap;
@@ -32,30 +34,30 @@ label {
 input[type="submit"] {
   font: 1em "Roboto Mono", monospace;
   padding: 10px;
-}
 
-input[type="submit"]:disabled,
-input[type="submit"]:active {
-  background-color: #eaeaea;
-  color: #707070;
+  &:disabled,
+  &:active {
+    background-color: #eaeaea;
+    color: @greyColour;
+  }
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
   background-color: #232323;
-  border: 1px #757575 solid;
+  border: 1px @greyColour solid;
   color: #fff;
   padding: 10px;
   resize: none;
   font: 1em "Roboto Mono", monospace;
   flex: 1;
   outline: none;
-  caret-color: #757575;
+  caret-color: @greyColour;
 }
 
 #status:focus {
-  color: grey;
+  color: @greyColour;
 }
 
 textarea {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import css from './Sidebar.module.less';
 
 // Function to render a single menu item
 function MenuItem({
@@ -8,7 +9,7 @@ function MenuItem({
 }) {
   const tag = external
     ? <a href={link} target="_blank" rel="noreferrer">{name}</a>
-    : <NavLink to={link} activeStyle={{ color: '#f00' }}>{name}</NavLink>;
+    : <NavLink to={link} activeClassName={css.activePage}>{name}</NavLink>;
   return (
     <li>
       &apos;
