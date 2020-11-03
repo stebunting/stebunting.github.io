@@ -18,7 +18,7 @@ function Input({
             type: type !== 'textarea' ? type : undefined,
             placeholder: 'undefined',
             value,
-            style: { color: valid ? '#4f4' : '#f66' }
+            className: valid ? css.valid : css.invalid
           }
         )}
       </label>

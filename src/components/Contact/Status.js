@@ -5,8 +5,8 @@ import statusMessages from './statusMessages';
 
 function Status({ status }) {
   const getColor = () => {
-    if (status === statusMessages.EMAIL_SENT) return { color: '#4f4' };
-    if (status === statusMessages.ERROR) return { color: '#f66' };
+    if (status === statusMessages.EMAIL_SENT) return css.valid;
+    if (status === statusMessages.ERROR) return css.invalid;
     return {};
   };
 
@@ -20,7 +20,7 @@ function Status({ status }) {
           type="text"
           value={status}
           placeholder="undefined"
-          style={getColor()}
+          className={getColor()}
           readOnly
         />
       </label>

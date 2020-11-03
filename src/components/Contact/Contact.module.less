@@ -8,6 +8,16 @@ form {
 .formElement {
   padding: 10px 0;
   display: flex;
+
+  textarea.valid,
+  input.valid {
+    color: @greenColour;
+  }
+
+  textarea.invalid,
+  input.invalid {
+    color: @redColour;
+  }
 }
 
 label {

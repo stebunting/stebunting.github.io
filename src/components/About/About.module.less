@@ -2,7 +2,12 @@
 
 .profilePicture {
   float: right;
-  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 100%);
-  mask-image: linear-gradient(to left, transparent 0%, black 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 60%,
+    transparent 90%
+  );
+  mask-image: linear-gradient(to right, black 0%, black 60%, transparent 90%);
   padding: 0 0 1em 1em;
 }

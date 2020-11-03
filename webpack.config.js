@@ -58,9 +58,7 @@ module.exports = {
       RECAPTCHA_API_KEY: process.env.RECAPTCHA_API_KEY
     }),
     new DotenvWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'style.css'
-    }),
+    new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
         { from: 'public', to: '.' }

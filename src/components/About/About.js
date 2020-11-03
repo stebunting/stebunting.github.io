@@ -24,6 +24,9 @@ function About() {
         </p>
 
         <p>
+          Computers have been part of my life ever since I learnt to program BASIC on a BBC Model B
+          at the age of 6. Ever since the internet became accessible to the general public,
+          I&apos;ve had at least 1 or 2 websites on the go!
           I have spent the last few years honing my development skills, working on various personal
           projects and taking every opportunity to learn something new or develop my skills. I have
           no fear of sitting in front of an empty IDE with a new project in my head and a new
