@@ -117,7 +117,7 @@ function CV() {
             array prediction.
           </li>
           <li>
-            A good knowledge base of audio theory ranging from acoustics and electro- acoustics to
+            A good knowledge base of audio theory ranging from acoustics and electro-acoustics to
             audio engineering and electronics.
           </li>
         </ul>
