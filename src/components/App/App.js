@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.less';
 import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
@@ -29,14 +29,16 @@ const ContactWrapper = () => Wrap(<Contact />);
 
 function App() {
   return (
-    <HashRouter basename="/">
-      <Route exact path="/" component={MainWrapper} />
-      <Route path="/about" component={AboutWrapper} />
-      <Route path="/projects" component={ProjectsWrapper} />
-      <Route path="/technology" component={TechnologyWrapper} />
-      <Route path="/cv" component={CVWrapper} />
-      <Route path="/contact" component={ContactWrapper} />
-    </HashRouter>
+    <Router basename="/">
+      <Switch>
+        <Route exact path="/" component={MainWrapper} />
+        <Route path="/about" component={AboutWrapper} />
+        <Route path="/projects" component={ProjectsWrapper} />
+        <Route path="/technology" component={TechnologyWrapper} />
+        <Route path="/cv" component={CVWrapper} />
+        <Route path="/contact" component={ContactWrapper} />
+      </Switch>
+    </Router>
   );
 }
 
