@@ -5,7 +5,7 @@ import MenuItem from './MenuItem';
 
 // Function to render menu sidebar
 function Sidebar() {
-  const windowBreakpoint = 800;
+  const windowBreakpoint = 900;
   const [main, setMain] = useState({
     expanded: false,
     edited: false

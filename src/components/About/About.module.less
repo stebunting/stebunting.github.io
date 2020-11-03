@@ -1,7 +1,8 @@
-@import "../App/Constants";
+@import "../App/Colours";
+@import "../App/Breakpoints";
 
 .profilePicture {
-  float: right;
+  text-align: center;
   -webkit-mask-image: linear-gradient(
     to right,
     black 0%,
@@ -10,4 +11,20 @@
   );
   mask-image: linear-gradient(to right, black 0%, black 60%, transparent 90%);
   padding: 0 0 1em 1em;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: @tablet) {
+  .profilePicture {
+    float: right;
+  }
+
+  .imgContainer {
+    display: block;
+    justify-content: unset;
+  }
 }

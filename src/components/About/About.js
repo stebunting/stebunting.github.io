@@ -7,12 +7,14 @@ function About() {
     <div className="main">
       <Typewriter text="About" />
       <div>
-        <img
-          className={css.profilePicture}
-          src="images/about/stevebunting.jpg"
-          alt="Steve Bunting"
-          width={240}
-        />
+        <div className={css.imgContainer}>
+          <img
+            className={css.profilePicture}
+            src="images/about/stevebunting.jpg"
+            alt="Steve Bunting"
+            width={240}
+          />
+        </div>
 
         <p>
           Hi, my name is Steve, and I am a professional sound engineer of 15 years. After touring

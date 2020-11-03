@@ -10,7 +10,7 @@ function Menu({
   const classes = expanded ? css.navList : [css.navList, css.navListFolded].join(' ');
 
   return (
-    <ul>
+    <ul className={css.menuSection}>
       <li>
         <span
           className={css.menuDropdown}
@@ -24,9 +24,10 @@ function Menu({
           <Arrow expanded={expanded} />
           <span className={css.keyword}>const</span>
           &nbsp;
-          {name}
+          <span className={css.variable}>{name}</span>
         </span>
-        &nbsp;= [
+        &nbsp;
+        <span className={css.variable}>= [</span>
         <ul className={classes}>
           {children}
         </ul>
