@@ -4,6 +4,7 @@ import TechnologyDetailElement from './TechnologyDetailElement';
 import TechnologyButtons from './TechnologyButtons';
 import Typewriter from '../../helpers/Typewriter/Typewriter';
 import Dropdown from '../Dropdown/Dropdown';
+import css from './Technology.module.less';
 
 function Technology({ data }) {
   return (
@@ -13,6 +14,8 @@ function Technology({ data }) {
         data={data}
         detailElement={TechnologyDetailElement}
         buttonElement={TechnologyButtons}
+        styleOpen={css.detailOpen}
+        styleClosed={css.detailClosed}
       />
     </div>
   );

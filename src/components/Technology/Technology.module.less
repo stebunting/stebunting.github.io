@@ -1,5 +1,7 @@
 @import "../App/Constants";
 
+@minHeight: 250px;
+
 /* BUTTONS */
 .buttons {
   display: flex;
@@ -55,5 +57,32 @@
 
   img {
     margin-bottom: 8px;
+  }
+}
+
+.detailClosed {
+  height: 0;
+  animation: slideClosed 1s;
+}
+.detailOpen {
+  min-height: @minHeight;
+  animation: slideOpen 1s;
+}
+
+@keyframes slideOpen {
+  from {
+    min-height: 0;
+  }
+  to {
+    min-height: @minHeight;
+  }
+}
+
+@keyframes slideClosed {
+  from {
+    min-height: @minHeight;
+  }
+  to {
+    min-height: 0;
   }
 }

@@ -4,10 +4,9 @@ import Typewriter from '../../helpers/Typewriter/Typewriter';
 import ProjectDetailElement from './ProjectDetailElement';
 import ProjectButtons from './ProjectButtons';
 import Dropdown from '../Dropdown/Dropdown';
+import css from './Project.module.less';
 
-function Projects({
-  data
-}) {
+function Projects({ data }) {
   return (
     <div className="main">
       <Typewriter text="Projects" />
@@ -15,6 +14,8 @@ function Projects({
         data={data}
         detailElement={ProjectDetailElement}
         buttonElement={ProjectButtons}
+        styleOpen={css.detailOpen}
+        styleClosed={css.detailClosed}
       />
     </div>
   );

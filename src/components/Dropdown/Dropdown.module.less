@@ -12,34 +12,12 @@
   opacity: 0;
 }
 .detail.closed {
-  height: 0;
   opacity: 0;
   transition: opacity 1.5s;
-  animation: slideClosed 1s;
 }
 .detail.open {
-  min-height: @minHeight;
   opacity: 1;
   transition: opacity 1s;
-  animation: slideOpen 1s;
-}
-
-@keyframes slideOpen {
-  from {
-    min-height: 0;
-  }
-  to {
-    min-height: @minHeight;
-  }
-}
-
-@keyframes slideClosed {
-  from {
-    min-height: @minHeight;
-  }
-  to {
-    min-height: 0;
-  }
 }
 
 /* DETAIL ELEMENT OVERVIEW */

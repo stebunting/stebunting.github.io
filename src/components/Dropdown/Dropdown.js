@@ -6,7 +6,9 @@ import css from './Dropdown.module.less';
 function Dropdown({
   data,
   detailElement,
-  buttonElement
+  buttonElement,
+  styleOpen,
+  styleClosed
 }) {
   const [visibleElement, setVisibleElement] = useState(data[0].name);
   const [leavingElement, setLeavingElement] = useState('');
@@ -29,10 +31,10 @@ function Dropdown({
     setVisibleElement(newElement);
   }
 
-  const classes = [css.detail];
+  let classes = [css.detail];
   if (isOpen != null) {
-    if (isOpen) classes.push(css.open);
-    if (!isOpen) classes.push(css.closed);
+    if (isOpen) classes = [...classes, css.open, styleOpen];
+    if (!isOpen) classes = [...classes, css.closed, styleClosed];
   }
 
   return (
@@ -54,6 +56,8 @@ function Dropdown({
             visible={item.name === visibleElement}
             leaving={item.name === leavingElement}
             detailElement={detailElement}
+            styleOpen={styleOpen}
+            styleClosed={styleClosed}
           />
         ))}
       </div>
@@ -69,7 +73,9 @@ Dropdown.propTypes = {
     name: PropTypes.string.isRequired
   })).isRequired,
   detailElement: PropTypes.elementType.isRequired,
-  buttonElement: PropTypes.elementType.isRequired
+  buttonElement: PropTypes.elementType.isRequired,
+  styleOpen: PropTypes.string.isRequired,
+  styleClosed: PropTypes.string.isRequired
 };
 
 export default Dropdown;

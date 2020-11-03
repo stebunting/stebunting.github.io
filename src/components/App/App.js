@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './App.less';
 import Sidebar from '../Sidebar/Sidebar';
 import Main from '../Main/Main';
@@ -12,7 +13,11 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 
 const data = require('../../data.json');
 
-function Wrap(component) {
+function Wrap({ component, pageTitle }) {
+  useEffect(() => {
+    document.title = `Steve Bunting Software Development Portfolio${pageTitle}`;
+  }, []);
+
   return (
     <div className="container">
       <Sidebar />
@@ -20,14 +25,53 @@ function Wrap(component) {
     </div>
   );
 }
+Wrap.propTypes = {
+  component: PropTypes.element.isRequired,
+  pageTitle: PropTypes.string.isRequired
+};
 
-const MainWrapper = () => Wrap(<Main />);
-const AboutWrapper = () => Wrap(<About />);
-const ProjectsWrapper = () => Wrap(<Projects data={data.projects} />);
-const TechnologyWrapper = () => Wrap(<Technology data={data.technologies} />);
-const CVWrapper = () => Wrap(<CV />);
-const ContactWrapper = () => Wrap(<Contact />);
-const PageNotFoundWrapper = () => Wrap(<PageNotFound />);
+const MainWrapper = () => (
+  <Wrap
+    component={<Main />}
+    pageTitle=""
+  />
+);
+const AboutWrapper = () => (
+  <Wrap
+    component={<About />}
+    pageTitle=" // About"
+  />
+);
+const ProjectsWrapper = () => (
+  <Wrap
+    component={<Projects data={data.projects} />}
+    pageTitle=" // Projects"
+  />
+);
+const TechnologyWrapper = () => (
+  <Wrap
+    component={<Technology data={data.technologies} />}
+    pageTitle=" // Technology"
+  />
+);
+const CVWrapper = () => (
+  <Wrap
+    component={<CV />}
+    pageTitle=" // CV"
+  />
+);
+const ContactWrapper = () => (
+  <Wrap
+    component={<Contact />}
+    pageTitle=" // Contact"
+  />
+);
+const PageNotFoundWrapper = () => (
+  <Wrap
+    component={<PageNotFound />}
+    pageTitle=" // Page Not Found"
+  />
+);
 
 function App() {
   return (

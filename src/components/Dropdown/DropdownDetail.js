@@ -7,7 +7,7 @@ function DropdownDetail({
   isOpeningOrClosing,
   visible,
   leaving,
-  detailElement
+  detailElement,
 }) {
   const detailClasses = [css.detailElement];
   if (visible) {
