@@ -1,11 +1,12 @@
 language: node_js
 node_js:
-- 14
+  - 14
 env:
   global:
     secure: Qg6tuxpn/LRYzY2BYdBx1AKHUJERQGE+0lT1EQUH8vSwMEi5kmqwqcNjlcgHPc0vRJuLMcEqKnl4UDODkHteEYoKh1UX+OtN0FROKczHaVke0jITrx1jV+hnsXeF7LFoU4tI+pF7dxnnjDCZ+BgFqkptnasn5MlQ7rr8BU8jK0KE/oAWK9ebvwBQidV/8oecj9Y9dwZu4bdwmblimvGCfNeBv5DrqxWeoOQl4a1uZ30hvUhUjK6qzD2Bb+tcvVJ2SxVcRYDy+SksTZ9wx5/gBuGUVmlvpw3wHz/u6Bj4W782+H/BZpL00edArApdxFVyejUiZpIllZW+Cx6mKe0oOSdDlwoK+6HKbLTPAewXWi/cW7KbMUSfKSGSsEOGeNjCklMLnNqHz+H+LN93HAyXRIOPjOvaijLOuUKYc3pgtHkawC3MKOjb03+zdaBA/G+2eyCOTeWE59lVbPAX7G4+dTpZrKL4KXCS6DXSKXl/CqNrnUdZmXn82NVBaAe3GkmmuGAcYmX3qfC/S8/g8IMIAVdeX2NSHePorH9APrMmZ8bqy8suQUbWKSiMk1GKR/NpHfmJMe/YUilTzV7dHzHxkNUBpQLI0rB6WPnBO4BfeF0pvc10pGCoQDUqpx9IA0PP5HJCVEp8pjP1yex2RxDn+07VgjwYhad68WBV5XycyxI=
 script:
-- npm run build
+  - npm run build
+  - touch dist/.nojekyll
 deploy:
   provider: pages
   skip_cleanup: true

@@ -5,37 +5,37 @@
 
   <url>
     <loc>https://stebunting.github.io/</loc>
-    <lastmod>2020-10-15T20:56:45+00:00</lastmod>
+    <lastmod>2020-11-03T20:56:45+00:00</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://stebunting.github.io/#/about</loc>
-    <lastmod>2020-10-15T20:56:45+00:00</lastmod>
+    <loc>https://stebunting.github.io/about</loc>
+    <lastmod>2020-11-03T20:56:45+00:00</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://stebunting.github.io/#/projects</loc>
-    <lastmod>2020-10-15T20:56:45+00:00</lastmod>
+    <loc>https://stebunting.github.io/projects</loc>
+    <lastmod>2020-11-03T20:56:45+00:00</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://stebunting.github.io/#/technology</loc>
-    <lastmod>2020-10-15T20:56:45+00:00</lastmod>
+    <loc>https://stebunting.github.io/technology</loc>
+    <lastmod>2020-11-03T20:56:45+00:00</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://stebunting.github.io/#/cv</loc>
-    <lastmod>2020-10-15T20:56:45+00:00</lastmod>
+    <loc>https://stebunting.github.io/cv</loc>
+    <lastmod>2020-11-03T20:56:45+00:00</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://stebunting.github.io/#/contact</loc>
-    <lastmod>2020-10-15T20:56:45+00:00</lastmod>
+    <loc>https://stebunting.github.io/contact</loc>
+    <lastmod>2020-11-03T20:56:45+00:00</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
