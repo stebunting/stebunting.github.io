@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpackPlugin = require('dotenv-webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 require('dotenv').config();
 
@@ -20,7 +21,7 @@ module.exports = {
       }, {
         test: /\.less$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -33,7 +34,7 @@ module.exports = {
         include: /\.module\.less$/
       }, {
         test: /\.less$/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
         exclude: /\.module\.less$/
       }, {
         test: /\.(png|svg|jpg|gif)$/,
@@ -57,6 +58,9 @@ module.exports = {
       RECAPTCHA_API_KEY: process.env.RECAPTCHA_API_KEY
     }),
     new DotenvWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'public', to: '.' }
