@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import './App.less';
 import Sidebar from '../Sidebar/Sidebar';
@@ -11,15 +12,16 @@ import CV from '../CV/CV';
 import Contact from '../Contact/Contact';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
-const data = require('../../data.json');
+const data = require('../../data/data.json');
+const metadata = require('../../data/metadata.json');
 
-function Wrap({ component, pageTitle }) {
-  useEffect(() => {
-    document.title = `Steve Bunting Software Development Portfolio${pageTitle}`;
-  }, []);
-
+function Wrap({ component, pageMetadata }) {
   return (
     <div className="container">
+      <Helmet>
+        <title>{`Steve Bunting Software Development Portfolio${pageMetadata.title}`}</title>
+        <meta name="description" content={pageMetadata.description} />
+      </Helmet>
       <Sidebar />
       {component}
     </div>
@@ -27,49 +29,52 @@ function Wrap({ component, pageTitle }) {
 }
 Wrap.propTypes = {
   component: PropTypes.element.isRequired,
-  pageTitle: PropTypes.string.isRequired
+  pageMetadata: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
+  }).isRequired
 };
 
 const MainWrapper = () => (
   <Wrap
     component={<Main />}
-    pageTitle=""
+    pageMetadata={metadata.main}
   />
 );
 const AboutWrapper = () => (
   <Wrap
     component={<About />}
-    pageTitle=" // About"
+    pageMetadata={metadata.about}
   />
 );
 const ProjectsWrapper = () => (
   <Wrap
     component={<Projects data={data.projects} />}
-    pageTitle=" // Projects"
+    pageMetadata={metadata.projects}
   />
 );
 const TechnologyWrapper = () => (
   <Wrap
     component={<Technology data={data.technologies} />}
-    pageTitle=" // Technology"
+    pageMetadata={metadata.technology}
   />
 );
 const CVWrapper = () => (
   <Wrap
     component={<CV />}
-    pageTitle=" // CV"
+    pageMetadata={metadata.cv}
   />
 );
 const ContactWrapper = () => (
   <Wrap
     component={<Contact />}
-    pageTitle=" // Contact"
+    pageMetadata={metadata.contact}
   />
 );
 const PageNotFoundWrapper = () => (
   <Wrap
     component={<PageNotFound />}
-    pageTitle=" // Page Not Found"
+    pageMetadata={metadata.pageNotFound}
   />
 );
 

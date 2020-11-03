@@ -7,6 +7,9 @@ function CV() {
   return (
     <div className="main">
       <Typewriter text="CV" />
+      <a href="docs/steve_bunting_cv.pdf" download>
+        <button type="button">Download as PDF</button>
+      </a>
       <div>
         <h3 className={[css.cvSubheader, css.top].join(' ')}>About</h3>
         <p>

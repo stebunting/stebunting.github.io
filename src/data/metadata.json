@@ -1,0 +1,30 @@
+{
+  "main": {
+    "title": "",
+    "description": "Online Software Development portfolio of Steve Bunting, developer with experience in Node.js, Python, Java, Swift and web technologies"
+  },
+  "about": {
+    "title": " // About",
+    "description": "Steve Bunting is a software developer with experience in JavaScript (Node.js / React), Python (Flask), Java, Swift and web technologies (PHP / HTML5 / CSS)."
+  },
+  "projects": {
+    "title": " // Projects",
+    "description": "A selection of projects that Steve has worked on."
+  },
+  "technology": {
+    "title": " // Technology",
+    "description": "Software development technologies that Steve Bunting is familiar with."
+  },
+  "cv": {
+    "title": " // CV",
+    "description": "Steve Bunting's Software Development CV."
+  },
+  "contact": {
+    "title": " // Contact",
+    "description": "Contact Steve Bunting."
+  },
+  "pageNotFound": {
+    "title": " // Page Not Found",
+    "description": ""
+  }
+}
