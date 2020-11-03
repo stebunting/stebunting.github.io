@@ -56,6 +56,18 @@ h2:before {
 p {
   margin: 0 0 1.4em;
 }
+button {
+  font: 1em "Roboto Mono", monospace;
+  background-color: #232323;
+  color: #fff;
+  border: 1px #909090 solid;
+  padding: 1em;
+  margin: 10px 0;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #6c6;
+}
 /* MAIN POSITIONING CONTAINERS */
 #root {
   height: 100vh;
@@ -156,19 +168,8 @@ li .iw8HvdP9u2Bnqjbi33Nx6 {
   margin: 0;
 }
 ._3Gdw53WBVvfL_Vzpvw462- {
-  font: 1em "Roboto Mono", monospace;
-  display: inline-block;
-  background-color: #232323;
-  color: #fff;
-  border: 1px #909090 solid;
   font-size: 1.4em;
   width: 250px;
-  padding: 1em;
-  margin: 10px 0;
-  cursor: pointer;
-}
-._3Gdw53WBVvfL_Vzpvw462-:hover {
-  background-color: mediumseagreen;
 }
 /* DETAIL ELEMENT */
 ._2Uiwf4IWbEZwBG9zvt2jcx {
@@ -301,19 +302,8 @@ h3 {
   margin: 0;
 }
 ._3K6Sr3-YFj9fenM_yTNWE1 {
-  font: 1em "Roboto Mono", monospace;
-  display: inline-block;
-  background-color: #232323;
-  color: #fff;
-  border: 1px #909090 solid;
   font-size: 1.4em;
   width: 250px;
-  padding: 1em;
-  margin: 10px 0;
-  cursor: pointer;
-}
-._3K6Sr3-YFj9fenM_yTNWE1:hover {
-  background-color: #6c6;
 }
 /* DETAIL ELEMENT SPECIFICS */
 ._3jLMk_TkHvMYSBdVWtOgxG {
