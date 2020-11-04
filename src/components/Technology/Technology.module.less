@@ -1,6 +1,6 @@
 @import "../App/Colours";
 
-@minHeight: 250px;
+@maxHeight: 300px;
 
 /* BUTTONS */
 .buttons {
@@ -17,23 +17,28 @@
 }
 
 /* DETAIL ELEMENT SPECIFICS */
-.title {
+.title,
+.description,
+.items {
   display: flex;
-  font-size: 1.4em;
+  flex-direction: row;
   justify-content: center;
-}
-
-.description {
-  display: flex;
-  justify-content: center;
-  color: @greyColour;
   text-align: center;
 }
 
+.title {
+  font-size: 1.4em;
+  padding: 1em 0 0;
+}
+
+.description {
+  color: @greyColour;
+  padding: 0.6em 0;
+}
+
 .items {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0 1em;
 }
 
 .item {
@@ -45,32 +50,5 @@
 
   img {
     margin-bottom: 8px;
-  }
-}
-
-.detailClosed {
-  height: 0;
-  animation: slideClosed 1s;
-}
-.detailOpen {
-  min-height: @minHeight;
-  animation: slideOpen 1s;
-}
-
-@keyframes slideOpen {
-  from {
-    min-height: 0;
-  }
-  to {
-    min-height: @minHeight;
-  }
-}
-
-@keyframes slideClosed {
-  from {
-    min-height: @minHeight;
-  }
-  to {
-    min-height: 0;
   }
 }

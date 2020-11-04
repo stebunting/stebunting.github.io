@@ -11,11 +11,20 @@ function ProjectDetailElement({ data, dropdownClasses }) {
       </div>
 
       <div className={css.thumb}>
-        <img
-          src={`images/projects/${data.thumbImg}`}
-          alt={`${data.name}`}
-          height={200}
-        />
+        {data.thumbImg.map((img) => (
+          <a
+            id={`${img}Link`}
+            key={`${img}Link`}
+            href={`images/projects/${img}`}
+          >
+            <img
+              key={img}
+              src={`images/projects/${img}`}
+              alt={`${data.name}`}
+              height={200}
+            />
+          </a>
+        ))}
       </div>
 
       <div className={css.description}>
@@ -31,6 +40,7 @@ function ProjectDetailElement({ data, dropdownClasses }) {
       <div className={css.links}>
         {data.links.map((link) => (
           <a
+            id={`${link.link}Link`}
             href={link.link}
             target="_blank"
             rel="noreferrer"
@@ -46,7 +56,7 @@ function ProjectDetailElement({ data, dropdownClasses }) {
 ProjectDetailElement.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    thumbImg: PropTypes.string.isRequired,
+    thumbImg: PropTypes.arrayOf(PropTypes.string).isRequired,
     description: PropTypes.string.isRequired,
     links: PropTypes.arrayOf(PropTypes.shape({
       type: PropTypes.string.isRequired,

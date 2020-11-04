@@ -1,7 +1,9 @@
 {
   "projects": [{
     "name": "whisk.se",
-    "thumbImg": "whisk.png",
+    "thumbImg": [
+      "whisk.png"
+    ],
     "description": "A website and web store for an eco-conscious bakery in Stockholm",
     "links": [
       { "type": "homepage", "link": "https://whisk.se/" },
@@ -25,7 +27,9 @@
     ]
   }, {
     "name": "Naomi Lien Presave",
-    "thumbImg": "dnn.png",
+    "thumbImg": [
+      "dnn.png"
+    ],
     "description": "Presave campaign for Naomi Lien's new track release, enabling fans to autosave to Spotify, Apple Music and Deezer on release date.",
     "links": [
       { "type": "homepage", "link": "http://opensourcemuzic.com/dnn/"}
@@ -41,7 +45,10 @@
     ]
   }, {
     "name": "RFXp",
-    "thumbImg": "rfxp.jpg",
+    "thumbImg": [
+      "rfxp-1.jpg",
+      "rfxp-2.jpg"
+    ],
     "description": "An Android / iOS application for calculating and verifying inter-modulations and avoiding clashes with local broadcasting when setting up touring radio microphone systems.",
     "links": [
       { "type": "homepage", "link": "http://rfxp.stevebunting.com/" }
@@ -54,7 +61,9 @@
     ]
   }, {
     "name": "RF Library",
-    "thumbImg": "rflibrary.png",
+    "thumbImg": [
+      "rflibrary.png"
+    ],
     "description": "An OS X application to convert, process and file exported files from radio scanners for use in radio microphone and in-ear monitoring configuration.",
     "links": [
       { "type": "homepage", "link": "https://rflibrary.stevebunting.com/" },
@@ -67,7 +76,9 @@
     ]
   }, {
     "name": "HFx",
-    "thumbImg": "hfx.png",
+    "thumbImg": [
+      "hfx.png"
+    ],
     "description": "A web app for retrieving historical exchange rates and displaying them in a usable way for efficient book-keeping.",
     "links": [
       { "type": "homepage", "link": "http://hfx.stevebunting.com" },
@@ -87,7 +98,9 @@
     ]
   }, {
     "name": "Share Trader",
-    "thumbImg": "sharetrader.png",
+    "thumbImg": [
+      "sharetrader.png"
+    ],
     "description": "A web application for keeping track of LSE-based share portfolios. Gets up-to-date data from ADVFN and logs it to a database to track portfolios and compare to indices. Final project for CS50.",
     "links": [
       { "type": "homepage", "link": "http://sharetrader.stevebunting.com" },

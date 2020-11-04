@@ -1,23 +1,21 @@
 @import "../App/Colours";
 
-@minHeight: 300px;
-
 .detail {
-  background-color: #232323;
-  position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   border: 1px #aaa solid;
-  width: 100%;
   overflow: hidden;
   opacity: 0;
+  background-color: @buttonBackground;
 }
 .detail.closed {
   opacity: 0;
-  transition: opacity 1.5s;
+  transition: opacity 1.5s, height 1s;
 }
 .detail.open {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 1s, height 1s;
 }
 
 /* DETAIL ELEMENT OVERVIEW */
@@ -25,11 +23,8 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
+  grid-column-start: 1;
+  grid-row-start: 1;
   transform: translateX(-100%);
 }
 .detailElement.visible {

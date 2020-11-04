@@ -1,7 +1,5 @@
 @import "../App/Colours";
 
-@minHeight: 500px;
-
 /* BUTTONS */
 .buttons {
   display: flex;
@@ -46,6 +44,10 @@ h3 {
   display: flex;
   justify-content: center;
   padding: 1em;
+
+  img {
+    margin: 0 1em;
+  }
 }
 
 .description {
@@ -62,31 +64,4 @@ h3 {
 
 .linkSeperator {
   white-space: pre;
-}
-
-.detailClosed {
-  height: 0;
-  animation: slideClosed 1s;
-}
-.detailOpen {
-  min-height: @minHeight;
-  animation: slideOpen 1s;
-}
-
-@keyframes slideOpen {
-  from {
-    min-height: 0;
-  }
-  to {
-    min-height: @minHeight;
-  }
-}
-
-@keyframes slideClosed {
-  from {
-    min-height: @minHeight;
-  }
-  to {
-    min-height: 0;
-  }
 }

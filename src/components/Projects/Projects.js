@@ -4,7 +4,6 @@ import Typewriter from '../../helpers/Typewriter/Typewriter';
 import ProjectDetailElement from './ProjectDetailElement';
 import ProjectButtons from './ProjectButtons';
 import Dropdown from '../Dropdown/Dropdown';
-import css from './Project.module.less';
 
 function Projects({ data }) {
   return (
@@ -14,8 +13,6 @@ function Projects({ data }) {
         data={data}
         detailElement={ProjectDetailElement}
         buttonElement={ProjectButtons}
-        styleOpen={css.detailOpen}
-        styleClosed={css.detailClosed}
       />
     </div>
   );
@@ -23,7 +20,7 @@ function Projects({ data }) {
 Projects.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    thumbImg: PropTypes.string.isRequired,
+    thumbImg: PropTypes.arrayOf(PropTypes.string).isRequired,
     description: PropTypes.string.isRequired,
     links: PropTypes.arrayOf(PropTypes.shape({
       type: PropTypes.string.isRequired,
