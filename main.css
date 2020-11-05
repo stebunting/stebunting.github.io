@@ -53,6 +53,10 @@ h2:before {
   color: #f66;
   padding-right: 0.5em;
 }
+h3 {
+  color: #fff;
+  font-size: 1.4em;
+}
 p {
   margin: 0 0 1.4em;
 }
@@ -191,51 +195,32 @@ li .iw8HvdP9u2Bnqjbi33Nx6 {
     width: 100%;
   }
 }
-/* DETAIL ELEMENT */
-._2Uiwf4IWbEZwBG9zvt2jcx {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  color: #909090;
-  text-align: center;
-  padding: 2vh 4vw;
-}
 /* DETAIL ELEMENT SPECIFICS */
-h3 {
+._8jG_NQPA51VmIoeP8ncQE,
+._15s08wTNwths-_Pp4to-tg,
+._13m8269hsTtM_-4vg9NM_d,
+._3XvEEbg7STwz9qhoO3TVMi,
+._2pgBEQgMjKhGp7WiIKPGGu,
+._2yTRmPdCl2pgp2lctgycSc {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
-  font-size: 1.4em;
-  margin-bottom: 0;
-  color: #fff;
+  text-align: center;
 }
 ._8jG_NQPA51VmIoeP8ncQE {
-  margin-top: 0;
+  margin: 0;
 }
 ._15s08wTNwths-_Pp4to-tg {
-  display: flex;
   font-size: 0.8em;
-  justify-content: center;
 }
 ._13m8269hsTtM_-4vg9NM_d {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
   width: 90%;
 }
 ._13m8269hsTtM_-4vg9NM_d img {
   box-sizing: border-box;
   width: 100%;
   padding: 2vh 4vw;
-}
-._3XvEEbg7STwz9qhoO3TVMi {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-._2pgBEQgMjKhGp7WiIKPGGu,
-._2yTRmPdCl2pgp2lctgycSc {
-  display: flex;
-  justify-content: center;
 }
 .QNBuFHbvjmD7umSyPI4Ev {
   white-space: pre;
@@ -250,6 +235,7 @@ h3 {
   overflow: hidden;
   opacity: 0;
   background-color: #232323;
+  margin-bottom: 10px;
 }
 ._2UtUHs8Vf1sB_vRZv0rvAn._xZuUAsIZx5lA1GaMMfyv {
   opacity: 0;
@@ -264,6 +250,11 @@ h3 {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  color: #909090;
+  text-align: center;
+  padding: 2vh 4vw;
   grid-column-start: 1;
   grid-row-start: 1;
   transform: translateX(-100%);
@@ -328,11 +319,6 @@ h3 {
     width: 100%;
   }
 }
-/* DETAIL ELEMENT */
-._2W7K72pwwmy4GeI5T2fake {
-  color: #909090;
-  text-align: center;
-}
 /* DETAIL ELEMENT SPECIFICS */
 ._3jLMk_TkHvMYSBdVWtOgxG,
 ._2FV71F4-nIE6Mb-0LZItBG,
@@ -343,11 +329,10 @@ h3 {
   text-align: center;
 }
 ._3jLMk_TkHvMYSBdVWtOgxG {
-  font-size: 1.4em;
   padding: 1em 0 0;
+  margin: 0;
 }
 ._2FV71F4-nIE6Mb-0LZItBG {
-  color: #909090;
   padding: 0.6em 0;
 }
 .-FEVnxufY_PtLW-1SExL8 {
