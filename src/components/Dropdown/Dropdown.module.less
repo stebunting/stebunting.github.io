@@ -1,6 +1,7 @@
 @import "../App/Colours";
 
 .detail {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -54,5 +55,22 @@
   }
   to {
     transform: translateX(100%);
+  }
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 1em;
+
+  img {
+    opacity: 0.5;
+    height: 24px;
   }
 }

@@ -4,11 +4,11 @@
     "thumbImg": [
       "whisk.png"
     ],
-    "description": "A website and web store for an eco-conscious bakery in Stockholm",
+    "description": "A website and e-commerce store for an eco-conscious bakery in Stockholm",
     "links": [
       { "type": "homepage", "link": "https://whisk.se/" },
-      { "type": "github", "link": "https://github.com/stebunting/whiskse" },
-      { "type": "github", "link": "https://github.com/stebunting/whisk-management" }
+      { "type": "gitHub", "link": "https://github.com/stebunting/whiskse" },
+      { "type": "gitHub", "link": "https://github.com/stebunting/whisk-management" }
     ],
     "date": "May - June 2020",
     "technologies": [
@@ -67,7 +67,7 @@
     "description": "An OS X application to convert, process and file exported files from radio scanners for use in radio microphone and in-ear monitoring configuration.",
     "links": [
       { "type": "homepage", "link": "https://rflibrary.stevebunting.com/" },
-      { "type": "github", "link": "https://github.com/stebunting/rf-library" }
+      { "type": "gitHub", "link": "https://github.com/stebunting/rf-library" }
     ],
     "date": "March 2017 - August 2019",
     "technologies": [
@@ -82,7 +82,7 @@
     "description": "A web app for retrieving historical exchange rates and displaying them in a usable way for efficient book-keeping.",
     "links": [
       { "type": "homepage", "link": "http://hfx.stevebunting.com" },
-      { "type": "github", "link": "https://github.com/stebunting/hfx" }
+      { "type": "gitHub", "link": "https://github.com/stebunting/hfx" }
     ],
     "date": "June 2017",
     "technologies": [
@@ -105,7 +105,7 @@
     "links": [
       { "type": "homepage", "link": "http://sharetrader.stevebunting.com" },
       { "type": "youtube", "link": "https://www.youtube.com/watch?v=F2OheR7O0CE" },
-      { "type": "github", "link": "https://github.com/stebunting/share-trader" }
+      { "type": "gitHub", "link": "https://github.com/stebunting/share-trader" }
     ],
     "date": "April 2017",
     "technologies": [
