@@ -10,7 +10,7 @@ function ProjectDetailElement({ data, dropdownClasses }) {
         {data.date}
       </div>
 
-      <div className={css.thumb}>
+      <div className={css.thumbs}>
         {data.thumbImg.map((img) => (
           <a
             id={`${img}Link`}
@@ -21,7 +21,6 @@ function ProjectDetailElement({ data, dropdownClasses }) {
               key={img}
               src={`images/projects/${img}`}
               alt={`${data.name}`}
-              height={200}
             />
           </a>
         ))}

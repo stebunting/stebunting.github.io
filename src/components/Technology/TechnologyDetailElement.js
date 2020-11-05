@@ -5,7 +5,7 @@ import css from './Technology.module.less';
 
 function TechnologyDetailElement({ data, dropdownClasses }) {
   return (
-    <div className={dropdownClasses}>
+    <div className={[dropdownClasses, css.detailElement].join(' ')}>
       <div className={css.title}>
         {data.name}
       </div>

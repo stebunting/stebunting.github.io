@@ -1,4 +1,5 @@
 @import "../App/Colours";
+@import "../App/Breakpoints";
 
 /* BUTTONS */
 .buttons {
@@ -16,9 +17,12 @@
 
 /* DETAIL ELEMENT */
 .detailElement {
-  padding: 2em;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   color: @greyColour;
   text-align: center;
+  padding: 2vh 4vw;
 }
 
 /* DETAIL ELEMENT SPECIFICS */
@@ -40,13 +44,16 @@ h3 {
   justify-content: center;
 }
 
-.thumb {
+.thumbs {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: 1em;
+  width: 90%;
 
   img {
-    margin: 0 1em;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2vh 4vw;
   }
 }
 
