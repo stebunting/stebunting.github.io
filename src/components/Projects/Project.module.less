@@ -21,39 +21,29 @@
   }
 }
 
-/* DETAIL ELEMENT */
-.detailElement {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  color: @greyColour;
-  text-align: center;
-  padding: 2vh 4vw;
-}
-
 /* DETAIL ELEMENT SPECIFICS */
-h3 {
+.title,
+.date,
+.thumbs,
+.description,
+.technologies,
+.links {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
-  font-size: 1.4em;
-  margin-bottom: 0;
-  color: #fff;
+  text-align: center;
 }
 
 .title {
-  margin-top: 0;
+  margin: 0;
 }
 
 .date {
-  display: flex;
   font-size: 0.8em;
-  justify-content: center;
 }
 
 .thumbs {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
   width: 90%;
 
   img {
@@ -61,18 +51,6 @@ h3 {
     width: 100%;
     padding: 2vh 4vw;
   }
-}
-
-.description {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.technologies,
-.links {
-  display: flex;
-  justify-content: center;
 }
 
 .linkSeperator {

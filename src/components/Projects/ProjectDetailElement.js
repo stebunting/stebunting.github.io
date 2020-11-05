@@ -4,7 +4,7 @@ import css from './Project.module.less';
 
 function ProjectDetailElement({ data, dropdownClasses }) {
   return (
-    <div className={[dropdownClasses, css.detailElement].join(' ')}>
+    <div className={dropdownClasses}>
       <h3 className={css.title}>{data.name}</h3>
       <div className={css.date}>
         {data.date}

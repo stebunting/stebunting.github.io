@@ -5,10 +5,10 @@ import css from './Technology.module.less';
 
 function TechnologyDetailElement({ data, dropdownClasses }) {
   return (
-    <div className={[dropdownClasses, css.detailElement].join(' ')}>
-      <div className={css.title}>
+    <div className={dropdownClasses}>
+      <h3 className={css.title}>
         {data.name}
-      </div>
+      </h3>
       <div className={css.description}>
         {data.description}
       </div>
