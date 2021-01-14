@@ -43,13 +43,15 @@ function Dropdown(props: Props): ReactElement {
   });
 
   function handleClick(
-    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent<HTMLDivElement>
+    event:
+      React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLDivElement | HTMLButtonElement>
   ) {
-    let id;
+    let id = '';
     let updateState = true;
-    if (event.target.id.includes('Button')) {
-      id = event.target.id.replace('Button', '');
-    } else if (event.target.id.includes('Link')) {
+    if (event.currentTarget.id.includes('Button')) {
+      id = event.currentTarget.id.replace('Button', '');
+    } else if (event.currentTarget.id.includes('Link')) {
       updateState = false;
     } else {
       id = visibleElement;
