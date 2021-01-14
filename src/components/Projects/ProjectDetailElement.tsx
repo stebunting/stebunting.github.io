@@ -59,7 +59,9 @@ function ProjectDetailElement(props: Props): ReactElement {
           >
             {link.type}
           </a>
-        )).reduce((a, b) => [a, ' // ', b])}
+        )).reduce((a, b) => (
+          a.length > 0 ? [...a, '//', b] : [b]
+        ), [] as Array<ReactElement | string>)}
       </div>
     </div>
   );
