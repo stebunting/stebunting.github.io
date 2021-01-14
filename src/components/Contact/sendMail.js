@@ -13,7 +13,7 @@ function sendEmail(details) {
         .then((token) => {
           payload.greptchaToken = token;
 
-          fetch('https://rfxp-api.herokuapp.com/contact/', {
+          fetch(`${process.env.API_BASE_URL}${process.env.API_MAILER_ENDPOINT}`, {
             method: 'post',
             headers: {
               'Content-Type': 'application/json'
