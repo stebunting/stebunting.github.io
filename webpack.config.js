@@ -6,10 +6,26 @@ const CopyPlugin = require('copy-webpack-plugin');
 require('dotenv').config();
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/env']
+            }
+          }, {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ]
+      }, {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -22,6 +38,7 @@ module.exports = {
         test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader,
+          '@teamsupercell/typings-for-css-modules-loader',
           {
             loader: 'css-loader',
             options: {
@@ -34,12 +51,16 @@ module.exports = {
         include: /\.module\.less$/
       }, {
         test: /\.less$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'less-loader'
+        ],
         exclude: /\.module\.less$/
       }
     ]
   },
-  resolve: { extensions: ['.js'] },
+  resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
   devServer: {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
