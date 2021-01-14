@@ -1,12 +1,14 @@
 language: node_js
 node_js:
-  - 14
+- 14
 env:
   global:
-    secure: Qg6tuxpn/LRYzY2BYdBx1AKHUJERQGE+0lT1EQUH8vSwMEi5kmqwqcNjlcgHPc0vRJuLMcEqKnl4UDODkHteEYoKh1UX+OtN0FROKczHaVke0jITrx1jV+hnsXeF7LFoU4tI+pF7dxnnjDCZ+BgFqkptnasn5MlQ7rr8BU8jK0KE/oAWK9ebvwBQidV/8oecj9Y9dwZu4bdwmblimvGCfNeBv5DrqxWeoOQl4a1uZ30hvUhUjK6qzD2Bb+tcvVJ2SxVcRYDy+SksTZ9wx5/gBuGUVmlvpw3wHz/u6Bj4W782+H/BZpL00edArApdxFVyejUiZpIllZW+Cx6mKe0oOSdDlwoK+6HKbLTPAewXWi/cW7KbMUSfKSGSsEOGeNjCklMLnNqHz+H+LN93HAyXRIOPjOvaijLOuUKYc3pgtHkawC3MKOjb03+zdaBA/G+2eyCOTeWE59lVbPAX7G4+dTpZrKL4KXCS6DXSKXl/CqNrnUdZmXn82NVBaAe3GkmmuGAcYmX3qfC/S8/g8IMIAVdeX2NSHePorH9APrMmZ8bqy8suQUbWKSiMk1GKR/NpHfmJMe/YUilTzV7dHzHxkNUBpQLI0rB6WPnBO4BfeF0pvc10pGCoQDUqpx9IA0PP5HJCVEp8pjP1yex2RxDn+07VgjwYhad68WBV5XycyxI=
+    - API_BASE_URL=https://stevebunting-mailer.herokuapp.com
+    - API_MAILER_ENDPOINT=/api/mailer/portfolio
+    secure: s2gFnzZp4oUCHM6eImLqs1MtGSLatx8szO0Bd9gK8g3T3Di3M0RMSEhDrweHv6lB0nNQLeN5zTy9ys+PoHv1PMbaDEDnP4utrXepCV6DAATFmxnAqLqrJUong+nMZTcXwQGzE6rF3k/hZHRdtw/fHlJ0WoM7O/+nqLWAh6dhV0oY4tzB8LE8AIdxcF98uHzDzxixGWaZ89OzZDEd9p/KAqGw+Srk/Nfem2XlHyuk0BJTvupzR0ZSCWibTvB0G7IXP7G3rnmfpp8quH50rNWd4pHZJijMaHDA/2IttwZCzVgj7/TgmhV1dHINEcEkbSbtR65RuxuJW329Zfrs00ATzRrnuxdNbVh9YccvPnwQt2lBb5y1W7CEylMnH7KPYG9dg1Q2MrIoyDvUt60org0KGYHCX582lvTev3wJQSVqn4NJEE1u/hXVEvVcaEPANes8CFKufCOS3u9Inhe3f27WxMMvqrWCJaI40NFoynRNX+uLza18xa0ujqadkBiITaq7Qb118KBmQBza/oaaqqjfkOWkzGfgztEkQK3YwiWv7yJFgEAP6xYfX8YWOQsC/V3lpvS8WZW95+s00nAqUqgisvI0Prh4CpD8CGc2x9Ve1Ii8fljRT0Oux0zgFiYZ9dpXhUxz9mK3xV17bZEW9Z2n64C6mYPkwnjMznmwuU5WWME=
 script:
-  - npm run build
-  - touch dist/.nojekyll
+- npm run build
+- touch dist/.nojekyll
 deploy:
   provider: pages
   skip_cleanup: true
