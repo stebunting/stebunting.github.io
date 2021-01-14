@@ -46,19 +46,19 @@ function ContactFormController(): ReactElement {
     }
   }
 
-  function getStatus() {
-    if (formDetails.nameValid && formDetails.emailValid && formDetails.messageValid) {
-      return statusMessages.VALID_INPUT;
-    }
-    if (status === statusMessages.INVALID_INPUT) {
-      return statusMessages.INVALID_INPUT;
-    }
-    return statusMessages.UNDEFINED;
-  }
-
   useEffect(() => {
+    function getStatus() {
+      if (formDetails.nameValid && formDetails.emailValid && formDetails.messageValid) {
+        return statusMessages.VALID_INPUT;
+      }
+      if (status === statusMessages.INVALID_INPUT) {
+        return statusMessages.INVALID_INPUT;
+      }
+      return statusMessages.UNDEFINED;
+    }
+
     setStatus(getStatus());
-  }, [formDetails]);
+  }, [status, formDetails]);
 
   function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = event.target;
