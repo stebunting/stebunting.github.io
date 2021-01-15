@@ -68,6 +68,7 @@ module.exports = {
     historyApiFallback: true
   },
   output: {
+    publicPath: '/',
     filename: 'bundle.js'
   },
   plugins: [
