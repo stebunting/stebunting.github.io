@@ -1,4 +1,4 @@
 # Steve Bunting Portfolio
-[![Build Status](https://travis-ci.com/stebunting/stebunting.github.io.svg?branch=master)](https://travis-ci.com/stebunting/stebunting.github.io)
+[![Deploy](https://github.com/stebunting/stebunting.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/stebunting/stebunting.github.io/actions/workflows/deploy.yml)
 
 A portfolio of my software development, built with React.
