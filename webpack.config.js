@@ -62,9 +62,10 @@ module.exports = {
   },
   resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
   devServer: {
-    contentBase: path.join(__dirname, 'public/'),
+    static: {
+      directory: path.resolve(__dirname, 'public'),
+    },
     port: 3000,
-    stats: 'minimal',
     historyApiFallback: true
   },
   output: {
