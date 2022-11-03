@@ -70,7 +70,7 @@ module.exports = {
   },
   output: {
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[contenthash].js'
   },
   plugins: [
     new HtmlWebpackPlugin({
