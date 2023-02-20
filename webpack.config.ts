@@ -1,11 +1,16 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DotenvWebpackPlugin = require('dotenv-webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-require('dotenv').config();
+import path from 'path';
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import DotenvWebpackPlugin from 'dotenv-webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import { Configuration as WebpackConfiguration } from "webpack";
+import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
 
-module.exports = {
+interface Configuration extends WebpackConfiguration {
+  devServer?: WebpackDevServerConfiguration;
+}
+
+const config: Configuration = {
   entry: './src/index.tsx',
   module: {
     rules: [
@@ -86,3 +91,5 @@ module.exports = {
     })
   ]
 };
+
+export default config;
