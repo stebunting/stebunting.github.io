@@ -21,9 +21,22 @@ function MenuItem(props: Props): ReactElement {
     lastItem
   } = props;
 
-  const tag = external
-    ? <a href={link} target="_blank" rel="noreferrer">{name}</a>
-    : <NavLink to={link} activeClassName={css.activePage}>{name}</NavLink>;
+  const tag = external ? (
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {name}
+    </a>
+   ) : (
+    <NavLink
+      to={link}
+      className={({ isActive }) => isActive ? css.activePage : undefined}
+    >
+      {name}
+    </NavLink>
+   );
   return (
     <li>
       &apos;

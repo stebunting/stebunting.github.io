@@ -1,6 +1,6 @@
 // Requirements
-import React, { ReactElement } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 // Types
@@ -24,11 +24,11 @@ import data from '../../data/data.json';
 import metadata from '../../data/metadata.json';
 
 interface Props {
-  component: ReactElement,
+  component: React.ReactElement,
   pageMetadata: MetaItem
 }
 
-function Wrap(props: Props): ReactElement {
+function Wrap(props: Props): React.ReactElement {
   const { component, pageMetadata } = props;
 
   return (
@@ -86,19 +86,30 @@ const PageNotFoundWrapper = () => (
   />
 );
 
-function App(): ReactElement {
+function App(): React.ReactElement {
   return (
-    <Router basename="/">
-      <Switch>
-        <Route exact path="/" component={MainWrapper} />
-        <Route path="/about" component={AboutWrapper} />
-        <Route path="/projects" component={ProjectsWrapper} />
-        <Route path="/technology" component={TechnologyWrapper} />
-        <Route path="/cv" component={CVWrapper} />
-        <Route path="/contact" component={ContactWrapper} />
-        <Route component={PageNotFoundWrapper} />
-      </Switch>
-    </Router>
+    <RouterProvider router={createBrowserRouter([
+      {
+        path: "/",
+        element: <MainWrapper />,
+        errorElement: <PageNotFoundWrapper />,
+      }, {
+        path: "/about",
+        element: <AboutWrapper />,
+      }, {
+        path: "/projects",
+        element: <ProjectsWrapper />,
+      }, {
+        path: "/technology",
+        element: <TechnologyWrapper />,
+      }, {
+        path: "/cv",
+        element: <CVWrapper />,
+      }, {
+        path: "/contact",
+        element: <ContactWrapper />,
+      },
+    ])} />
   );
 }
 
