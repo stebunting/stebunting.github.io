@@ -136,7 +136,8 @@ li .E9Wehv9zwx1oETY0O2xl {
 }
 .Sy41yvc2WHNAIBAucLP9.PKsbS_AhjGaJOqaDKy7E {
   opacity: 1;
-  transition: opacity 1s, height 1s;
+  transition: opacity 1s,
+    height 1s;
 }
 /* DETAIL ELEMENT OVERVIEW */
 .v3i8UMvbd7X2WmcBqgXL {
@@ -364,15 +365,16 @@ footer {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbWmT.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/robotomono/v22/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vqPQw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vqPQw.ttf) format('truetype');
 }
 /* MAIN LAYOUT CSS STYLING */
 * {
