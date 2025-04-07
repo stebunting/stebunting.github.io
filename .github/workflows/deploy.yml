@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Use Node.js v18
-        uses: actions/setup-node@v3
+      - name: Use Node.js v22
+        uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "22"
 
       - name: Create .env
         run: printf "API_BASE_URL=$API_BASE_URL\nAPI_MAILER_ENDPOINT=$API_MAILER_ENDPOINT\nRECAPTCHA_API_KEY=${{ secrets.RECAPTCHA_API_KEY }}" > .env
