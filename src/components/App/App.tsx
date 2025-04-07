@@ -1,7 +1,6 @@
 // Requirements
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 
 // Types
 import { MetaItem } from '../../types/MetaItem';
@@ -33,10 +32,8 @@ function Wrap(props: Props): React.ReactElement {
 
   return (
     <div className="container">
-      <Helmet>
-        <title>{`Steve Bunting Software Development Portfolio${pageMetadata.title}`}</title>
-        <meta name="description" content={pageMetadata.description} />
-      </Helmet>
+      <title>{`Steve Bunting Software Development Portfolio${pageMetadata.title}`}</title>
+      <meta name="description" content={pageMetadata.description} />
       <Sidebar />
       {component}
     </div>

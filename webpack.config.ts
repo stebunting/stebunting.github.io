@@ -48,8 +48,11 @@ const config: Configuration = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true
-            }
+              modules: {
+                namedExport: false,
+                exportLocalsConvention: 'camel-case-only',
+              },
+            },
           },
           'less-loader'
         ],
