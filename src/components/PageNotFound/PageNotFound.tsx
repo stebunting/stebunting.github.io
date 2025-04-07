@@ -1,8 +1,8 @@
 // Requirements
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 // Components
-import Typewriter from '../../helpers/Typewriter/Typewriter';
+import Typewriter from "../../helpers/Typewriter/Typewriter";
 
 function PageNotFound(): ReactElement {
   return (

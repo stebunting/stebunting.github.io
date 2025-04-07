@@ -1,11 +1,11 @@
 // Requirements
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 // Style
-import css from './Sidebar.module.less';
+import css from "./Sidebar.module.less";
 
 interface Props {
-  expanded: boolean
+  expanded: boolean;
 }
 
 // Component to render an arrow

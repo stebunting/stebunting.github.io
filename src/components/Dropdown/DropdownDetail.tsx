@@ -1,27 +1,21 @@
 // Requirements
-import React, { ElementType, ReactElement } from 'react';
+import React, { ElementType, ReactElement } from "react";
 
 // Style
-import css from './Dropdown.module.less';
+import css from "./Dropdown.module.less";
 
 interface Props {
   item: {
-    name: string
-  },
-  isOpeningOrClosing: boolean,
-  visible: boolean,
-  leaving: boolean,
-  DetailElement: ElementType
+    name: string;
+  };
+  isOpeningOrClosing: boolean;
+  visible: boolean;
+  leaving: boolean;
+  DetailElement: ElementType;
 }
 
 function DropdownDetail(props: Props): ReactElement {
-  const {
-    item,
-    isOpeningOrClosing,
-    visible,
-    leaving,
-    DetailElement,
-  } = props;
+  const { item, isOpeningOrClosing, visible, leaving, DetailElement } = props;
 
   const detailClasses = [css.detailElement];
   if (visible) {
@@ -39,7 +33,7 @@ function DropdownDetail(props: Props): ReactElement {
     <DetailElement
       data={item}
       key={`${item.name}Detail`}
-      dropdownClasses={detailClasses.join(' ')}
+      dropdownClasses={detailClasses.join(" ")}
     />
   );
 }

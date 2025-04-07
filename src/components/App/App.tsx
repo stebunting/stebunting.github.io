@@ -1,30 +1,30 @@
 // Requirements
-import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Types
-import { MetaItem } from '../../types/MetaItem';
+import { MetaItem } from "../../types/MetaItem";
 
 // Components
-import Sidebar from '../Sidebar/Sidebar';
-import Main from '../Main/Main';
-import About from '../About/About';
-import Projects from '../Projects/Projects';
-import Technology from '../Technology/Technology';
-import CV from '../CV/CV';
-import Contact from '../Contact/Contact';
-import PageNotFound from '../PageNotFound/PageNotFound';
+import Sidebar from "../Sidebar/Sidebar";
+import Main from "../Main/Main";
+import About from "../About/About";
+import Projects from "../Projects/Projects";
+import Technology from "../Technology/Technology";
+import CV from "../CV/CV";
+import Contact from "../Contact/Contact";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 // Style
-import './App.less';
+import "./App.less";
 
 // Data
-import data from '../../data/data.json';
-import metadata from '../../data/metadata.json';
+import data from "../../data/data.json";
+import metadata from "../../data/metadata.json";
 
 interface Props {
-  component: React.ReactElement,
-  pageMetadata: MetaItem
+  component: React.ReactElement;
+  pageMetadata: MetaItem;
 }
 
 function Wrap(props: Props): React.ReactElement {
@@ -41,16 +41,10 @@ function Wrap(props: Props): React.ReactElement {
 }
 
 const MainWrapper = () => (
-  <Wrap
-    component={<Main />}
-    pageMetadata={metadata.main}
-  />
+  <Wrap component={<Main />} pageMetadata={metadata.main} />
 );
 const AboutWrapper = () => (
-  <Wrap
-    component={<About />}
-    pageMetadata={metadata.about}
-  />
+  <Wrap component={<About />} pageMetadata={metadata.about} />
 );
 const ProjectsWrapper = () => (
   <Wrap
@@ -64,49 +58,45 @@ const TechnologyWrapper = () => (
     pageMetadata={metadata.technology}
   />
 );
-const CVWrapper = () => (
-  <Wrap
-    component={<CV />}
-    pageMetadata={metadata.cv}
-  />
-);
+const CVWrapper = () => <Wrap component={<CV />} pageMetadata={metadata.cv} />;
 const ContactWrapper = () => (
-  <Wrap
-    component={<Contact />}
-    pageMetadata={metadata.contact}
-  />
+  <Wrap component={<Contact />} pageMetadata={metadata.contact} />
 );
 const PageNotFoundWrapper = () => (
-  <Wrap
-    component={<PageNotFound />}
-    pageMetadata={metadata.pageNotFound}
-  />
+  <Wrap component={<PageNotFound />} pageMetadata={metadata.pageNotFound} />
 );
 
 function App(): React.ReactElement {
   return (
-    <RouterProvider router={createBrowserRouter([
-      {
-        path: "/",
-        element: <MainWrapper />,
-        errorElement: <PageNotFoundWrapper />,
-      }, {
-        path: "/about",
-        element: <AboutWrapper />,
-      }, {
-        path: "/projects",
-        element: <ProjectsWrapper />,
-      }, {
-        path: "/technology",
-        element: <TechnologyWrapper />,
-      }, {
-        path: "/cv",
-        element: <CVWrapper />,
-      }, {
-        path: "/contact",
-        element: <ContactWrapper />,
-      },
-    ])} />
+    <RouterProvider
+      router={createBrowserRouter([
+        {
+          path: "/",
+          element: <MainWrapper />,
+          errorElement: <PageNotFoundWrapper />,
+        },
+        {
+          path: "/about",
+          element: <AboutWrapper />,
+        },
+        {
+          path: "/projects",
+          element: <ProjectsWrapper />,
+        },
+        {
+          path: "/technology",
+          element: <TechnologyWrapper />,
+        },
+        {
+          path: "/cv",
+          element: <CVWrapper />,
+        },
+        {
+          path: "/contact",
+          element: <ContactWrapper />,
+        },
+      ])}
+    />
   );
 }
 

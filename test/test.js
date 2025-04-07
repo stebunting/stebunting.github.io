@@ -1,5 +1,5 @@
-const assert = require('assert');
+const assert = require("assert");
 
-test('truth test', () => {
+test("truth test", () => {
   assert(true);
 });

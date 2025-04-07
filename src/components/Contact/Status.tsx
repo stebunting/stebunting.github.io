@@ -1,14 +1,14 @@
 // Requirements
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 // Data
-import statusMessages from './statusMessages';
+import statusMessages from "./statusMessages";
 
 // Style
-import css from './Contact.module.less';
+import css from "./Contact.module.less";
 
 interface Props {
-  status: string
+  status: string;
 }
 
 function Status(props: Props): ReactElement {
@@ -17,7 +17,7 @@ function Status(props: Props): ReactElement {
   const getColor = () => {
     if (status === statusMessages.EMAIL_SENT) return css.valid;
     if (status === statusMessages.ERROR) return css.invalid;
-    return '';
+    return "";
   };
 
   return (

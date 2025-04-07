@@ -1,171 +1,171 @@
 {
-  "projects": [{
-    "name": "whisk.se",
-    "thumbImg": [
-      "whisk.png"
-    ],
-    "description": "A website and e-commerce store for an eco-conscious bakery in Stockholm",
-    "links": [
-      { "type": "homepage", "link": "https://whisk.se/" },
-      { "type": "gitHub", "link": "https://github.com/stebunting/whiskse" },
-      { "type": "gitHub", "link": "https://github.com/stebunting/whisk-management" }
-    ],
-    "date": "May - June 2020",
-    "technologies": [
-      "JavaScript",
-      "Node.js",
-      "MongoDB",
-      "REST APIs",
-      "Swish",
-      "HTML5",
-      "CSS",
-      "WordPress",
-      "WooCommerce",
-      "Git",
-      "GitHub",
-      "Heroku"
-    ]
-  }, {
-    "name": "OSM Presave",
-    "thumbImg": [
-      "dnn.png"
-    ],
-    "description": "Presave campaign for Naomi Lien's new track release, enabling fans to autosave to Spotify, Apple Music and Deezer on release date.",
-    "links": [
-      { "type": "homepage", "link": "http://opensourcemuzic.com/dnn/"}
-    ],
-		"date": "April 2020",
-    "technologies": [
-      "JavaScript",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Heroku",
-      "REST APIs"
-    ]
-  }, {
-    "name": "RFXp",
-    "thumbImg": [
-      "rfxp-1.jpg",
-      "rfxp-2.jpg"
-    ],
-    "description": "An Android / iOS application for calculating and verifying inter-modulations and avoiding clashes with local broadcasting when setting up touring radio microphone systems.",
-    "links": [
-      { "type": "homepage", "link": "http://rfxp.stevebunting.com/" }
-    ],
-    "date": "February - April 2020",
-    "technologies": [
-      "Java",
-      "Swift 5",
-      "ML Kit"
-    ]
-  }, {
-    "name": "RF Library",
-    "thumbImg": [
-      "rflibrary.png"
-    ],
-    "description": "An OS X application to convert, process and file exported files from radio scanners for use in radio microphone and in-ear monitoring configuration.",
-    "links": [
-      { "type": "homepage", "link": "https://rflibrary.stevebunting.com/" },
-      { "type": "gitHub", "link": "https://github.com/stebunting/rf-library" }
-    ],
-    "date": "March 2017 - August 2019",
-    "technologies": [
-      "Python",
-      "TkInter"
-    ]
-  }, {
-    "name": "HFx",
-    "thumbImg": [
-      "hfx.png"
-    ],
-    "description": "A web app for retrieving historical exchange rates and displaying them in a usable way for efficient book-keeping.",
-    "links": [
-      { "type": "homepage", "link": "http://hfx.stevebunting.com" },
-      { "type": "gitHub", "link": "https://github.com/stebunting/hfx" }
-    ],
-    "date": "June 2017",
-    "technologies": [
-      "Python",
-      "Flask",
-      "MySQL",
-      "JavaScript",
-      "HTML5",
-      "CSS",
-      "Bootstrap",
-      "jQuery",
-      "Heroku"
-    ]
-  }, {
-    "name": "Share Trader",
-    "thumbImg": [
-      "sharetrader.png"
-    ],
-    "description": "A web application for keeping track of LSE-based share portfolios. Gets up-to-date data from ADVFN and logs it to a database to track portfolios and compare to indices. Final project for CS50.",
-    "links": [
-      { "type": "homepage", "link": "http://sharetrader.stevebunting.com" },
-      { "type": "youtube", "link": "https://www.youtube.com/watch?v=F2OheR7O0CE" },
-      { "type": "gitHub", "link": "https://github.com/stebunting/share-trader" }
-    ],
-    "date": "April 2017",
-    "technologies": [
-      "Python",
-      "Flask",
-      "MySQL",
-      "JavaScript",
-      "HTML5",
-      "CSS",
-      "Bootstrap",
-      "Heroku"
-    ]
-  }],
-  "technologies": [{
-    "name": "code",
-    "description": "scripting and programming languages I have experience with",
-    "members": [
-      { "name": "JavaScript", "imgUrl": "js.png" },
-      { "name": "Python", "imgUrl": "python.png" },
-      { "name": "Java", "imgUrl": "java.png" },
-      { "name": "Swift", "imgUrl": "swift.svg" },
-      { "name": "PHP", "imgUrl": "php.png" },
-      { "name": "HTML5", "imgUrl": "html5.png" },
-      { "name": "CSS", "imgUrl": "css.png" }
-    ]
-  }, {
-    "name": "data",
-    "description": "databases I have leveraged",
-    "members": [
-      { "name": "MongoDB", "imgUrl": "mongodb.png" },
-      { "name": "MySQL", "imgUrl": "mysql.png" }
-    ]
-  }, {
-    "name": "testing",
-    "description": "testing frameworks I like",
-    "members": [
-      { "name": "Mocha", "imgUrl": "mocha.svg" }
-    ]
-  }, {
-    "name": "frameworks",
-    "description": "frameworks, libraries and toolkits I rely on",
-    "members": [
-      { "name": "Node.js", "imgUrl": "nodejs.png" },
-      { "name": "Express", "imgUrl": "express.png" },
-      { "name": "React", "imgUrl": "react.png" },
-      { "name": "Flask", "imgUrl": "flask.png" },
-      { "name": "jQuery", "imgUrl": "jquery.png" },
-      { "name": "Bootstrap", "imgUrl": "bootstrap.svg" },
-      { "name": "TkInter", "imgUrl": "python.png" },
-      { "name": "Firebase", "imgUrl": "firebase.png" }
-    ]
-  }, {
-    "name": "deployment",
-    "description": "my favourite tools for deployment and CI/CD",
-    "members": [
-      { "name": "Git", "imgUrl": "git.png" },
-      { "name": "GitHub", "imgUrl": "github.png" },
-      { "name": "Travis-CI", "imgUrl": "travis.png" },
-      { "name": "Heroku", "imgUrl": "heroku.svg" },
-      { "name": "cPanel", "imgUrl": "cpanel.svg" }
-    ]
-  }]
+  "projects": [
+    {
+      "name": "whisk.se",
+      "thumbImg": ["whisk.png"],
+      "description": "A website and e-commerce store for an eco-conscious bakery in Stockholm",
+      "links": [
+        { "type": "homepage", "link": "https://whisk.se/" },
+        { "type": "gitHub", "link": "https://github.com/stebunting/whiskse" },
+        {
+          "type": "gitHub",
+          "link": "https://github.com/stebunting/whisk-management"
+        }
+      ],
+      "date": "May - June 2020",
+      "technologies": [
+        "JavaScript",
+        "Node.js",
+        "MongoDB",
+        "REST APIs",
+        "Swish",
+        "HTML5",
+        "CSS",
+        "WordPress",
+        "WooCommerce",
+        "Git",
+        "GitHub",
+        "Heroku"
+      ]
+    },
+    {
+      "name": "OSM Presave",
+      "thumbImg": ["dnn.png"],
+      "description": "Presave campaign for Naomi Lien's new track release, enabling fans to autosave to Spotify, Apple Music and Deezer on release date.",
+      "links": [
+        { "type": "homepage", "link": "http://opensourcemuzic.com/dnn/" }
+      ],
+      "date": "April 2020",
+      "technologies": [
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Heroku",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "RFXp",
+      "thumbImg": ["rfxp-1.jpg", "rfxp-2.jpg"],
+      "description": "An Android / iOS application for calculating and verifying inter-modulations and avoiding clashes with local broadcasting when setting up touring radio microphone systems.",
+      "links": [
+        { "type": "homepage", "link": "http://rfxp.stevebunting.com/" }
+      ],
+      "date": "February - April 2020",
+      "technologies": ["Java", "Swift 5", "ML Kit"]
+    },
+    {
+      "name": "RF Library",
+      "thumbImg": ["rflibrary.png"],
+      "description": "An OS X application to convert, process and file exported files from radio scanners for use in radio microphone and in-ear monitoring configuration.",
+      "links": [
+        { "type": "homepage", "link": "https://rflibrary.stevebunting.com/" },
+        { "type": "gitHub", "link": "https://github.com/stebunting/rf-library" }
+      ],
+      "date": "March 2017 - August 2019",
+      "technologies": ["Python", "TkInter"]
+    },
+    {
+      "name": "HFx",
+      "thumbImg": ["hfx.png"],
+      "description": "A web app for retrieving historical exchange rates and displaying them in a usable way for efficient book-keeping.",
+      "links": [
+        { "type": "homepage", "link": "http://hfx.stevebunting.com" },
+        { "type": "gitHub", "link": "https://github.com/stebunting/hfx" }
+      ],
+      "date": "June 2017",
+      "technologies": [
+        "Python",
+        "Flask",
+        "MySQL",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "Bootstrap",
+        "jQuery",
+        "Heroku"
+      ]
+    },
+    {
+      "name": "Share Trader",
+      "thumbImg": ["sharetrader.png"],
+      "description": "A web application for keeping track of LSE-based share portfolios. Gets up-to-date data from ADVFN and logs it to a database to track portfolios and compare to indices. Final project for CS50.",
+      "links": [
+        { "type": "homepage", "link": "http://sharetrader.stevebunting.com" },
+        {
+          "type": "youtube",
+          "link": "https://www.youtube.com/watch?v=F2OheR7O0CE"
+        },
+        {
+          "type": "gitHub",
+          "link": "https://github.com/stebunting/share-trader"
+        }
+      ],
+      "date": "April 2017",
+      "technologies": [
+        "Python",
+        "Flask",
+        "MySQL",
+        "JavaScript",
+        "HTML5",
+        "CSS",
+        "Bootstrap",
+        "Heroku"
+      ]
+    }
+  ],
+  "technologies": [
+    {
+      "name": "code",
+      "description": "scripting and programming languages I have experience with",
+      "members": [
+        { "name": "JavaScript", "imgUrl": "js.png" },
+        { "name": "Python", "imgUrl": "python.png" },
+        { "name": "Java", "imgUrl": "java.png" },
+        { "name": "Swift", "imgUrl": "swift.svg" },
+        { "name": "PHP", "imgUrl": "php.png" },
+        { "name": "HTML5", "imgUrl": "html5.png" },
+        { "name": "CSS", "imgUrl": "css.png" }
+      ]
+    },
+    {
+      "name": "data",
+      "description": "databases I have leveraged",
+      "members": [
+        { "name": "MongoDB", "imgUrl": "mongodb.png" },
+        { "name": "MySQL", "imgUrl": "mysql.png" }
+      ]
+    },
+    {
+      "name": "testing",
+      "description": "testing frameworks I like",
+      "members": [{ "name": "Mocha", "imgUrl": "mocha.svg" }]
+    },
+    {
+      "name": "frameworks",
+      "description": "frameworks, libraries and toolkits I rely on",
+      "members": [
+        { "name": "Node.js", "imgUrl": "nodejs.png" },
+        { "name": "Express", "imgUrl": "express.png" },
+        { "name": "React", "imgUrl": "react.png" },
+        { "name": "Flask", "imgUrl": "flask.png" },
+        { "name": "jQuery", "imgUrl": "jquery.png" },
+        { "name": "Bootstrap", "imgUrl": "bootstrap.svg" },
+        { "name": "TkInter", "imgUrl": "python.png" },
+        { "name": "Firebase", "imgUrl": "firebase.png" }
+      ]
+    },
+    {
+      "name": "deployment",
+      "description": "my favourite tools for deployment and CI/CD",
+      "members": [
+        { "name": "Git", "imgUrl": "git.png" },
+        { "name": "GitHub", "imgUrl": "github.png" },
+        { "name": "Travis-CI", "imgUrl": "travis.png" },
+        { "name": "Heroku", "imgUrl": "heroku.svg" },
+        { "name": "cPanel", "imgUrl": "cpanel.svg" }
+      ]
+    }
+  ]
 }

@@ -1,9 +1,9 @@
 // Requirements
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 // Components
-import Typewriter from '../../helpers/Typewriter/Typewriter';
-import ContactFormController from './ContactFormController';
+import Typewriter from "../../helpers/Typewriter/Typewriter";
+import ContactFormController from "./ContactFormController";
 
 function Contact(): ReactElement {
   return (

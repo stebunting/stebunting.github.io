@@ -1,29 +1,26 @@
 // Requirements
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 // Components
-import Arrow from './Arrow';
+import Arrow from "./Arrow";
 
 // Style
-import css from './Sidebar.module.less';
+import css from "./Sidebar.module.less";
 
 interface Props {
-  name: string,
-  children: React.ReactNode,
-  expanded: boolean,
-  handleClick: (id: string) => void
+  name: string;
+  children: React.ReactNode;
+  expanded: boolean;
+  handleClick: (id: string) => void;
 }
 
 // Function to render a sidebar menu wrapper
 function Menu(props: Props): ReactElement {
-  const {
-    name,
-    children,
-    expanded,
-    handleClick
-  } = props;
+  const { name, children, expanded, handleClick } = props;
 
-  const classes = expanded ? css.navList : [css.navList, css.navListFolded].join(' ');
+  const classes = expanded
+    ? css.navList
+    : [css.navList, css.navListFolded].join(" ");
 
   return (
     <ul className={css.menuSection}>
@@ -34,7 +31,7 @@ function Menu(props: Props): ReactElement {
           tabIndex={0}
           onClick={() => handleClick(name)}
           onKeyDown={(event) => {
-            if (event.key === ' ') handleClick(name);
+            if (event.key === " ") handleClick(name);
           }}
         >
           <Arrow expanded={expanded} />
@@ -44,9 +41,7 @@ function Menu(props: Props): ReactElement {
         </span>
         &nbsp;
         <span className={css.variable}>= [</span>
-        <ul className={classes}>
-          {children}
-        </ul>
+        <ul className={classes}>{children}</ul>
         ];
       </li>
     </ul>

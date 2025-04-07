@@ -4,28 +4,28 @@ import React, {
   useRef,
   useLayoutEffect,
   ReactElement,
-  ElementType
-} from 'react';
+  ElementType,
+} from "react";
 
 // Components
-import DropdownDetail from './DropdownDetail';
+import DropdownDetail from "./DropdownDetail";
 
 // Style
-import css from './Dropdown.module.less';
+import css from "./Dropdown.module.less";
 
 interface Props {
   data: Array<{
-    name: string
-  }>,
-  DetailElement: ElementType,
-  ButtonElement: ElementType
+    name: string;
+  }>;
+  DetailElement: ElementType;
+  ButtonElement: ElementType;
 }
 
 function Dropdown(props: Props): ReactElement {
   const { data, DetailElement, ButtonElement } = props;
 
   const [visibleElement, setVisibleElement] = useState(data[0].name);
-  const [leavingElement, setLeavingElement] = useState('');
+  const [leavingElement, setLeavingElement] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isOpeningOrClosing, setIsOpeningOrClosing] = useState(false);
 
@@ -36,22 +36,22 @@ function Dropdown(props: Props): ReactElement {
     function windowUpdated() {
       if (ref.current) setElementHeight(ref.current.scrollHeight);
     }
-    window.addEventListener('resize', windowUpdated);
+    window.addEventListener("resize", windowUpdated);
     windowUpdated();
 
-    return () => window.removeEventListener('resize', windowUpdated);
+    return () => window.removeEventListener("resize", windowUpdated);
   });
 
   function handleClick(
     event:
-      React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>
-      | React.KeyboardEvent<HTMLDivElement | HTMLButtonElement>
+      | React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLDivElement | HTMLButtonElement>,
   ) {
-    let id = '';
+    let id = "";
     let updateState = true;
-    if (event.currentTarget.id.includes('Button')) {
-      id = event.currentTarget.id.replace('Button', '');
-    } else if (event.currentTarget.id.includes('Link')) {
+    if (event.currentTarget.id.includes("Button")) {
+      id = event.currentTarget.id.replace("Button", "");
+    } else if (event.currentTarget.id.includes("Link")) {
       updateState = false;
     } else {
       id = visibleElement;
@@ -61,11 +61,13 @@ function Dropdown(props: Props): ReactElement {
       const opening = !isOpen;
       const closing = isOpen && visibleElement === id;
       const newElement = visibleElement === id ? visibleElement : id;
-      const leaving = closing ? '' : leavingElement;
+      const leaving = closing ? "" : leavingElement;
 
       setIsOpeningOrClosing(opening || closing);
       setIsOpen(closing || opening ? !isOpen : isOpen);
-      setLeavingElement(newElement !== visibleElement ? visibleElement : leaving);
+      setLeavingElement(
+        newElement !== visibleElement ? visibleElement : leaving,
+      );
       setVisibleElement(newElement);
     }
   }
@@ -79,10 +81,10 @@ function Dropdown(props: Props): ReactElement {
   return (
     <>
       <div
-        className={classes.join(' ')}
+        className={classes.join(" ")}
         onClick={handleClick}
         onKeyDown={(event) => {
-          if (event.key === ' ') handleClick(event);
+          if (event.key === " ") handleClick(event);
         }}
         role="button"
         tabIndex={0}

@@ -1,17 +1,17 @@
 // Requirements
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 // Types
-import { Project } from '../../types/Project';
+import { Project } from "../../types/Project";
 
 // Components
-import Typewriter from '../../helpers/Typewriter/Typewriter';
-import ProjectDetailElement from './ProjectDetailElement';
-import ProjectButtons from './ProjectButtons';
-import Dropdown from '../Dropdown/Dropdown';
+import Typewriter from "../../helpers/Typewriter/Typewriter";
+import ProjectDetailElement from "./ProjectDetailElement";
+import ProjectButtons from "./ProjectButtons";
+import Dropdown from "../Dropdown/Dropdown";
 
 interface Props {
-  data: Array<Project>
+  data: Array<Project>;
 }
 
 function Projects(props: Props): ReactElement {

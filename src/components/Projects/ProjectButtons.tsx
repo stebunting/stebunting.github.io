@@ -1,12 +1,12 @@
 // Requirements
-import React from 'react';
+import React from "react";
 
 // Style
-import css from './Project.module.less';
+import css from "./Project.module.less";
 
 interface Props {
-  data: Array<string>,
-  handleClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+  data: Array<string>;
+  handleClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 function ProjectButtons(props: Props): React.ReactElement {

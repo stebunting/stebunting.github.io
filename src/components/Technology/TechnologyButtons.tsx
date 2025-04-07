@@ -1,12 +1,12 @@
 // Requirements
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
 // Style
-import css from './Technology.module.less';
+import css from "./Technology.module.less";
 
 interface Props {
-  data: Array<string>,
-  handleClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+  data: Array<string>;
+  handleClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 function TechnologyButtons(props: Props): ReactElement {

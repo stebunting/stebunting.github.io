@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   deploy:
@@ -13,27 +13,32 @@ jobs:
       API_MAILER_ENDPOINT: /api/mailer/portfolio
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Use Node.js v18
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Use Node.js v18
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-    - name: Create .env
-      run: printf "API_BASE_URL=$API_BASE_URL\nAPI_MAILER_ENDPOINT=$API_MAILER_ENDPOINT\nRECAPTCHA_API_KEY=${{ secrets.RECAPTCHA_API_KEY }}" > .env 
+      - name: Create .env
+        run: printf "API_BASE_URL=$API_BASE_URL\nAPI_MAILER_ENDPOINT=$API_MAILER_ENDPOINT\nRECAPTCHA_API_KEY=${{ secrets.RECAPTCHA_API_KEY }}" > .env
 
-    - name: Install Dependencies
-      run: npm ci
+      - name: Install Dependencies
+        run: npm ci
 
-    - name: Build
-      run: npm run build
+      - name: Lint
+        run: |
+          npm run eslint:check
+          npm run prettier:check
 
-    - name: No Jekyll
-      run: touch dist/.nojekyll
+      - name: Build
+        run: npm run build
 
-    - name: Deploy to Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: dist
+      - name: No Jekyll
+        run: touch dist/.nojekyll
+
+      - name: Deploy to Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist

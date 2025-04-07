@@ -1,8 +1,8 @@
 // Requirements
-import React, { useState, useEffect, ReactElement } from 'react';
+import React, { useState, useEffect, ReactElement } from "react";
 
 interface Props {
-  text: string
+  text: string;
 }
 
 function Typewriter(props: Props): ReactElement {
@@ -11,10 +11,10 @@ function Typewriter(props: Props): ReactElement {
   function getDelay() {
     const min = 80;
     const max = 500;
-    return Math.floor((Math.random() * (max - min)) + min);
+    return Math.floor(Math.random() * (max - min) + min);
   }
 
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
