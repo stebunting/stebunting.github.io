@@ -58,14 +58,18 @@ function ContactFormController(): ReactElement {
   useEffect(() => {
     function getStatus() {
       if (
+        status === statusMessages.SENDING ||
+        status === statusMessages.ERROR ||
+        status === statusMessages.INVALID_INPUT
+      ) {
+        return status;
+      }
+      if (
         formDetails.nameValid &&
         formDetails.emailValid &&
         formDetails.messageValid
       ) {
         return statusMessages.VALID_INPUT;
-      }
-      if (status === statusMessages.INVALID_INPUT) {
-        return statusMessages.INVALID_INPUT;
       }
       return statusMessages.UNDEFINED;
     }
@@ -77,6 +81,13 @@ function ContactFormController(): ReactElement {
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     const { name, value } = event.target;
+    setStatus(
+      status === statusMessages.EMAIL_SENT ||
+        status === statusMessages.ERROR ||
+        status === statusMessages.SENDING
+        ? statusMessages.UNDEFINED
+        : status,
+    );
     setFormDetails({
       ...formDetails,
       [name]: value,
