@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      API_BASE_URL: https://stevebunting-mailer.onrender.com
-      API_MAILER_ENDPOINT: /api/mailer/portfolio
+      API_BASE_URL: https://api.stevebunting.com
+      API_MAILER_ENDPOINT: /mailer
+      MAILER_SERVICE: PORTFOLIO
 
     steps:
       - name: Checkout Repository
@@ -22,7 +23,7 @@ jobs:
           node-version: "22"
 
       - name: Create .env
-        run: printf "API_BASE_URL=$API_BASE_URL\nAPI_MAILER_ENDPOINT=$API_MAILER_ENDPOINT\nRECAPTCHA_API_KEY=${{ secrets.RECAPTCHA_API_KEY }}" > .env
+        run: printf "API_BASE_URL=$API_BASE_URL\nAPI_MAILER_ENDPOINT=$API_MAILER_ENDPOINT\nMAILER_SERVICE=$MAILER_SERVICE\nRECAPTCHA_API_KEY=${{ secrets.RECAPTCHA_API_KEY }}" > .env
 
       - name: Install Dependencies
         run: npm ci

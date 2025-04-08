@@ -1,10 +1,8 @@
-declare const grecaptcha: ReCaptchaV2.ReCaptcha;
-
 interface MessageDetails {
   name: string;
   email: string;
   message: string;
-  greptchaToken?: string;
+  grecaptchaToken?: string;
 }
 
 function sendEmail(details: MessageDetails): Promise<{ status: string }> {
@@ -16,11 +14,11 @@ function sendEmail(details: MessageDetails): Promise<{ status: string }> {
   };
 
   return new Promise((resolve, reject) => {
-    grecaptcha.ready(() => {
-      grecaptcha
+    grecaptcha.enterprise.ready(() => {
+      grecaptcha.enterprise
         .execute(gRecaptchaToken, { action: "send_message" })
         .then((token) => {
-          payload.greptchaToken = token;
+          payload.grecaptchaToken = token;
 
           fetch(
             `${process.env.API_BASE_URL}${process.env.API_MAILER_ENDPOINT}`,
@@ -29,7 +27,10 @@ function sendEmail(details: MessageDetails): Promise<{ status: string }> {
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(payload),
+              body: JSON.stringify({
+                service: process.env.MAILER_SERVICE,
+                ...payload,
+              }),
             },
           )
             .then((response) => response.json())

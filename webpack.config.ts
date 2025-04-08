@@ -1,10 +1,12 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import DotenvWebpackPlugin from "dotenv-webpack";
+import Dotenv from "dotenv";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import CopyPlugin from "copy-webpack-plugin";
 import { Configuration as WebpackConfiguration } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+Dotenv.config();
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
