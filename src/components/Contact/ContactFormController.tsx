@@ -74,6 +74,7 @@ function ContactFormController(): ReactElement {
       return statusMessages.UNDEFINED;
     }
 
+    // eslint-disable-next-line
     setStatus(getStatus());
   }, [status, formDetails]);
 

@@ -22,7 +22,7 @@ export default defineConfig([
     plugins: { js },
     extends: ["js/recommended"],
   },
-  reactHooks.configs["recommended-latest"],
+  reactHooks.configs.flat.recommended,
   tseslint.configs.recommended,
   eslintConfigPrettier,
 ]);
