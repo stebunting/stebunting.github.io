@@ -49,28 +49,25 @@ function ContactFormController(): ReactElement {
     }
   }
 
-  useEffect(() => {
-    function getStatus() {
-      if (
-        status === statusMessages.SENDING ||
-        status === statusMessages.ERROR ||
-        status === statusMessages.INVALID_INPUT
-      ) {
-        return status;
-      }
-      if (
-        formDetails.nameValid &&
-        formDetails.emailValid &&
-        formDetails.messageValid
-      ) {
-        return statusMessages.VALID_INPUT;
-      }
-      return statusMessages.UNDEFINED;
+  if (
+    formDetails.nameValid &&
+    formDetails.emailValid &&
+    formDetails.messageValid
+  ) {
+    if (
+      status === statusMessages.UNDEFINED ||
+      status === statusMessages.INVALID_INPUT
+    ) {
+      setStatus(statusMessages.VALID_INPUT);
     }
-
-    // eslint-disable-next-line
-    setStatus(getStatus());
-  }, [status, formDetails]);
+  } else {
+    if (
+      status === statusMessages.VALID_INPUT ||
+      status === statusMessages.ERROR
+    ) {
+      setStatus(statusMessages.INVALID_INPUT);
+    }
+  }
 
   function handleChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
