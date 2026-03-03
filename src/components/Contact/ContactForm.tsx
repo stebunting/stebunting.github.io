@@ -1,5 +1,5 @@
 // Requirements
-import React, { ChangeEvent, FormEvent, ReactElement } from "react";
+import React, { ChangeEvent, ReactElement, SubmitEvent } from "react";
 
 // Components
 import Input from "./Input";
@@ -19,7 +19,7 @@ interface Props {
   };
   status: string;
   sending: boolean;
-  handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
+  handleSubmit: (event: SubmitEvent) => void;
   handleChange: (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;

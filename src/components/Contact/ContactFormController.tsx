@@ -1,11 +1,5 @@
 // Requirements
-import React, {
-  useState,
-  useEffect,
-  ReactElement,
-  ChangeEvent,
-  FormEvent,
-} from "react";
+import React, { useState, ReactElement, ChangeEvent, SubmitEvent } from "react";
 
 // Functions
 import statusMessages from "./statusMessages";
@@ -28,7 +22,7 @@ function ContactFormController(): ReactElement {
   const [status, setStatus] = useState(statusMessages.UNDEFINED);
 
   // Submit Form
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
     if (
       formDetails.nameValid &&
